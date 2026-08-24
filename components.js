@@ -140,10 +140,10 @@
         <a href="index.html#faq">FAQ</a>\
       </div>\
       <div class="nav-right">\
-        <button class="nav-cta" id="wag1" type="button" data-hz-whatsapp-cta aria-haspopup="dialog">' + WA_ICON + '<span>Join Free</span></button>\
+        <a class="nav-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">' + WA_ICON + '<span>Join Free</span></button>\
         <button class="nav-hamburger" id="hamburger" aria-label="Open menu">\
           <span></span><span></span><span></span>\
-        </button>\
+        </a>\
       </div>\
     </nav>\
     <div class="nav-drawer" id="navDrawer">\
@@ -152,7 +152,7 @@
       <a href="index.html#markets">Markets</a>\
       <a href="index.html#testimonials">Community</a>\
       <a href="index.html#faq">FAQ</a>\
-      <button type="button" class="drawer-cta" id="wag1" data-hz-whatsapp-cta aria-haspopup="dialog">Get Today\'s Free Market Briefing</button>\
+      <a class="drawer-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Get Today\'s Free Market Briefing</button>\
     </div>\
   ';
 
@@ -172,7 +172,7 @@
           <ul>\
             <li><a href="index.html#how">How It Works</a></li>\
             <li><a href="index.html#features">What You Get</a></li>\
-            <li><button type="button" id="wag1" data-hz-whatsapp-cta aria-haspopup="dialog">Join Free</button></li>\
+            <li><a type="button" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Join Free</a></li>\
             <li><a href="index.html#faq">FAQ</a></li>\
           </ul>\
         </div>\

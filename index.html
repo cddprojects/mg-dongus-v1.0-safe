@@ -4,31 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5ZDZMRBB');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2225455534880999');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2225455534880999&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-  <!-- DeepClick start --> <script src="https://storage.deepclick.com/dc-cdn/js-sdk/production/deep-click.js?mch_id=2245952&sdk_code=b3231f56&integration_type=website" defer></script> <!-- DeepClick end -->
+ 
   <title>USStockEdge — Free Daily US Stock Market Analysis &amp; Research</title>
   <meta name="description" content="Join thousands of US investors receiving free daily stock market analysis, technical data summaries, and stocks worth researching — delivered directly on WhatsApp. No fees, no commitments." />
 
@@ -1198,10 +1174,6 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZDZMRBB"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <!-- global nav injected by components.js -->
   <div id="g-nav"></div>
@@ -1315,10 +1287,10 @@
             Completely free — no subscription ever
           </div>
         </div>
-        <button class="btn-primary" id="wag1" type="button" data-hz-whatsapp-cta aria-haspopup="dialog" style="margin-top:32px;display:inline-flex;">
+        <a class="btn-primary" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer" style="margin-top:32px;display:inline-flex;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Get Today's Free Market Briefing
-        </button>
+        </a>
       </div>
 
       <!-- Right: animated WA mock -->
@@ -1627,7 +1599,7 @@
           <div style="font-size:2rem;margin-bottom:12px;">📲</div>
           <h4 style="color:#fff;">Ready to join?</h4>
           <p style="color:rgba(255,255,255,0.6);margin-bottom:20px;">Get your first daily update this morning.</p>
-          <button type="button" class="btn-primary" id="wag1" data-hz-whatsapp-cta aria-haspopup="dialog" style="font-size:0.85rem;padding:10px 22px;">Get Today's Free Market Briefing</button>
+          <button type="button" class="btn-primary" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;padding:10px 22px;">Get Today's Free Market Briefing</button>
         </div>
       </div>
     </div>
@@ -2156,6 +2128,49 @@
     });
   </script>
   <script src="components.js"></script>
-  
+  <script>
+(function () {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    fetch('/api/track-visitor.php', {
+
+        method: 'POST',
+
+        credentials: 'same-origin',
+
+        headers: {
+            'Content-Type':
+                'application/json'
+        },
+
+        keepalive: true,
+
+        body: JSON.stringify({
+
+            page_url:
+                window.location.href,
+
+            referrer:
+                document.referrer || null,
+
+            utm_source:
+                params.get('utm_source'),
+
+            utm_medium:
+                params.get('utm_medium'),
+
+            utm_campaign:
+                params.get('utm_campaign')
+        })
+
+    }).catch(function () {});
+
+})();
+</script>
 </body>
 </html>
