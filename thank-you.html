@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZDZMRBB');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1041540868247899');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1041540868247899&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- DeepClick start --> <script src="https://storage.deepclick.com/dc-cdn/js-sdk/production/deep-click.js?mch_id=2245952&sdk_code=b3231f56&integration_type=website" defer></script> <!-- DeepClick end -->
+  <title>You're In — USStockEdge</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0a1628;
+      --navy2:  #0f2042;
+      --blue:   #1a56db;
+      --blue2:  #2563eb;
+      --gold:   #f59e0b;
+      --white:  #ffffff;
+      --gray50: #f8fafc;
+      --gray100:#f1f5f9;
+      --gray200:#e2e8f0;
+      --gray400:#94a3b8;
+      --gray500:#64748b;
+      --gray700:#334155;
+      --gray900:#0f172a;
+      --wa:     #25D366;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray900);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── MAIN CONTENT ───────────────────────────────────────── */
+    .ty-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 5% 80px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #0b2d5e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle grid overlay */
+    .ty-wrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* glow orb */
+    .ty-wrap::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37,211,102,0.12) 0%, transparent 70%);
+      top: -100px; left: 50%; transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .ty-card {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* tick icon */
+    .ty-icon {
+      width: 72px; height: 72px;
+      background: rgba(37,211,102,0.15);
+      border: 2px solid rgba(37,211,102,0.35);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      color: #4ade80;
+    }
+    .ty-icon svg { width: 34px; height: 34px; }
+
+    /* confirmed badge */
+    .ty-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.25);
+      color: #4ade80; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .ty-badge .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+    }
+
+    .ty-headline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .ty-headline .name { color: var(--gold); }
+
+    .ty-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 440px;
+      margin: 0 auto 44px;
+      line-height: 1.75;
+    }
+
+    /* what happens next */
+    .ty-steps {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .ty-steps h3 {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+    .ty-step {
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .ty-step:last-child { margin-bottom: 0; }
+    .step-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700; color: var(--gold);
+    }
+    .step-text strong {
+      display: block; font-size: 0.92rem; font-weight: 700;
+      color: rgba(255,255,255,0.9); margin-bottom: 3px;
+    }
+    .step-text span {
+      font-size: 0.83rem; color: rgba(255,255,255,0.45); line-height: 1.5;
+    }
+
+    /* benefit pills */
+    .ty-pills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+      margin-bottom: 32px;
+    }
+    .ty-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.11);
+      color: rgba(255,255,255,0.65); padding: 7px 14px;
+      border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+    }
+    .ty-pill .check { color: #4ade80; font-size: 0.75rem; }
+
+    /* back link */
+    .ty-back {
+      font-size: 0.83rem; color: rgba(255,255,255,0.3);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .ty-back:hover { color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 600px) {
+      .ty-wrap { padding: 88px 4% 64px; }
+      .ty-steps { padding: 22px 20px; }
+    }
+    
+    .ctc-popup { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+  </style>
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
+  <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZDZMRBB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- global nav injected by components.js -->
+  <div id="g-nav"></div>
+
+  <!-- ─── THANK YOU CONTENT ─────────────────────────────────── -->
+  <main class="ty-wrap">
+    <div class="ty-card">
+
+      <div class="ty-badge">
+        <span class="dot"></span>
+        Sign-up Confirmed
+      </div>
+
+      <div class="ty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <h1 class="ty-headline" id="ty-headline">You're in!</h1>
+
+      <p class="ty-sub">
+        Your sign-up is confirmed. Your first morning briefing arrives before <strong style="color:rgba(255,255,255,0.85);">9 AM ET</strong> on the next trading day — delivered directly to your WhatsApp.
+      </p>
+
+      <div class="ty-steps">
+        <h3>What Happens Next</h3>
+        <div class="ty-step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>Check your WhatsApp</strong>
+            <span>You'll receive a group invite link shortly. Tap it to join the USStockEdge community.</span>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Look out for your morning briefing</strong>
+            <span>Before 9 AM ET on every trading day, our analyst shares 2–3 US stock profiles with full technical analysis.</span>
+          </div>
+        </div>
+        <div class="ty-step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Ask questions &amp; follow along</strong>
+            <span>Use the analysis as a starting point for your own research. Ask questions in the group — our analyst is there to help.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-pills">
+        <span class="ty-pill"><span class="check">✓</span> Always free</span>
+        <span class="ty-pill"><span class="check">✓</span> No subscription</span>
+        <span class="ty-pill"><span class="check">✓</span> Leave anytime</span>
+      </div>
+
+      <a class="ty-back" href="index.html">← Back to Home</a>
+
+    </div>
+  </main>
+
+  <!-- global footer injected by components.js -->
+  <div id="g-footer"></div>
+
+  <script>
+    // Personalise headline with name from URL param
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get('name');
+      if (name) {
+        var el = document.getElementById('ty-headline');
+        if (el) el.innerHTML = 'You\'re in, <span class="name">' + name.split(' ')[0] + '!</span>';
+      }
+    }());
+  </script>
+  <script src="components.js"></script>
+  </body>
+</html>

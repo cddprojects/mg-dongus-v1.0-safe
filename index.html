@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZDZMRBB');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2225455534880999');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2225455534880999&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- DeepClick start --> <script src="https://storage.deepclick.com/dc-cdn/js-sdk/production/deep-click.js?mch_id=2245952&sdk_code=b3231f56&integration_type=website" defer></script> <!-- DeepClick end -->
+  <title>USStockEdge — Free Daily US Stock Market Analysis &amp; Research</title>
+  <meta name="description" content="Join thousands of US investors receiving free daily stock market analysis, technical data summaries, and stocks worth researching — delivered directly on WhatsApp. No fees, no commitments." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0a1628;
+      --navy2:  #0f2042;
+      --blue:   #1a56db;
+      --blue2:  #2563eb;
+      --teal:   #0d9488;
+      --gold:   #f59e0b;
+      --gold2:  #d97706;
+      --green:  #16a34a;
+      --red:    #dc2626;
+      --white:  #ffffff;
+      --gray50: #f8fafc;
+      --gray100:#f1f5f9;
+      --gray200:#e2e8f0;
+      --gray400:#94a3b8;
+      --gray500:#64748b;
+      --gray700:#334155;
+      --gray900:#0f172a;
+      --wa:     #25D366;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray900);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 55%, #0b2d5e 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle grid overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* glowing orbs */
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(26,86,219,0.18) 0%, transparent 70%);
+      top: -100px; right: -150px;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.18;
+      max-width: 820px;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 .accent { color: var(--gold); }
+
+    .hero p.sub {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: rgba(255,255,255,0.72);
+      max-width: 600px;
+      margin-bottom: 42px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa);
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.3);
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-primary:hover {
+      background: #1ebe5a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(37,211,102,0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      padding: 15px 32px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-2px);
+    }
+
+    /* hero stats bar */
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 64px;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-item { text-align: center; }
+    .stat-item .val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .stat-item .val span { color: var(--gold); }
+    .stat-item .lbl {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+      align-self: stretch;
+    }
+
+    /* ticker tape */
+    .ticker-wrap {
+      width: 100%;
+      background: #060e1c;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      margin-top: 68px; /* offset for fixed nav */
+    }
+    .ticker-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 4px 16px 2px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .ticker-status-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+    .ticker-status-badge .live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
+      animation: liveblink 2s infinite;
+    }
+    .ticker-status-badge .live-dot.closed { background: var(--gold); animation: none; }
+    .ticker-last-update { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+    @keyframes liveblink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .ticker-scroll { overflow: hidden; padding: 14px 0; }
+    .ticker-track {
+      display: flex; gap: 0;
+      width: max-content;
+      animation: tickerMove 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 0 36px; font-size: 1rem; font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      border-right: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+    .ticker-item .t-price { color: rgba(255,255,255,0.5); font-size: 0.88rem; font-weight: 500; }
+    .ticker-item .up { color: #4ade80; }
+    .ticker-item .down { color: #f87171; }
+    @keyframes tickerMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* stocks tiles (top 20 grid) */
+    .stocks-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .stock-tile {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 10px 10px 8px;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .stock-tile:hover { background: rgba(255,255,255,0.09); }
+    .stock-tile.up-tile { border-color: rgba(74,222,128,0.2); }
+    .stock-tile.down-tile { border-color: rgba(248,113,113,0.2); }
+    .stock-tile.selected { border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.08); }
+    .st-sym { font-size: 0.72rem; font-weight: 800; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+    .st-price { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); margin-bottom: 3px; }
+    .st-chg { font-size: 0.72rem; font-weight: 700; }
+    .st-chg.up { color: #4ade80; }
+    .st-chg.down { color: #f87171; }
+    .loading-tile .st-price, .loading-tile .st-chg { color: rgba(255,255,255,0.2); }
+
+    /* stocks table */
+    .stocks-tabs {
+      display: flex; gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 0;
+    }
+    .stab {
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.45); font-size: 0.82rem; font-weight: 600;
+      padding: 10px 20px; border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .stab:hover { color: rgba(255,255,255,0.75); }
+    .stab.active { color: #fff; border-bottom-color: var(--gold); }
+
+    .stocks-table-scroll { overflow-x: auto; }
+    .stocks-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .stocks-table thead tr {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .stocks-table th {
+      padding: 10px 12px; text-align: left;
+      color: rgba(255,255,255,0.35); font-weight: 600;
+      font-size: 0.72rem; letter-spacing: 0.5px; text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .stocks-table th:nth-child(1) { width: 40px; }
+    .stocks-table th:nth-child(4),
+    .stocks-table th:nth-child(5),
+    .stocks-table th:nth-child(6) { text-align: right; }
+    .stocks-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      cursor: pointer; transition: background 0.15s;
+    }
+    .stocks-table tbody tr:hover { background: rgba(255,255,255,0.05); }
+    .stocks-table tbody tr.selected { background: rgba(245,158,11,0.08); }
+    .stocks-table td {
+      padding: 11px 12px; color: rgba(255,255,255,0.75);
+      white-space: nowrap;
+    }
+    .stocks-table td:nth-child(4),
+    .stocks-table td:nth-child(5),
+    .stocks-table td:nth-child(6) { text-align: right; }
+    .td-no { color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+    .td-sym { font-weight: 800; color: #fff; letter-spacing: 0.3px; }
+    .td-name { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+    .td-price { font-weight: 600; color: #fff; }
+    .td-up { color: #4ade80; font-weight: 700; }
+    .td-down { color: #f87171; font-weight: 700; }
+
+    /* light table variant */
+    .stab-light { color: var(--gray500); }
+    .stab-light:hover { color: var(--gray900); background: rgba(0,0,0,0.04); }
+    .stab-light.active { color: var(--navy); border-bottom-color: var(--blue2); }
+    .stocks-table-light th { color: var(--gray400); border-bottom: 1px solid var(--gray200); }
+    .stocks-table-light tbody tr { border-bottom: 1px solid var(--gray100); }
+    .stocks-table-light tbody tr:hover { background: var(--gray50); }
+    .stocks-table-light td { color: var(--gray700); }
+    .stocks-table-light .td-sym { color: var(--gray900); }
+    .stocks-table-light .td-price { color: var(--gray900); }
+    .stocks-table-light .td-up { color: #16a34a; }
+    .stocks-table-light .td-down { color: #dc2626; }
+
+    /* stock detail panel */
+    .detail-panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 10px;
+      animation: slideDown 0.2s ease;
+    }
+    @keyframes slideDown { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+    .dp-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .dp-sym { font-size: 1rem; font-weight: 800; color: #fff; margin-right: 8px; }
+    .dp-price { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-right: 6px; }
+    .dp-chg { font-size: 0.82rem; font-weight: 700; }
+    .dp-chg.up { color: #4ade80; }
+    .dp-chg.down { color: #f87171; }
+    .dp-close {
+      background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.5);
+      width: 24px; height: 24px; border-radius: 50%; cursor: pointer;
+      font-family: inherit; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .dp-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .dp-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px;
+    }
+    .dp-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;
+    }
+    .dp-row strong { color: rgba(255,255,255,0.88); font-weight: 600; }
+    .stock-tile.selected {
+      border-color: rgba(245,158,11,0.5);
+      background: rgba(245,158,11,0.08);
+    }
+
+    /* live data card styles */
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 100px; margin-bottom: 14px;
+      background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.25); color: #4ade80;
+    }
+    .live-badge .dot { width: 5px; height: 5px; border-radius: 50%; background: #4ade80; animation: liveblink 2s infinite; }
+    .live-badge.delayed { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.25); color: var(--gold); }
+    .live-badge.delayed .dot { background: var(--gold); animation: none; }
+    .mock-row .loading { color: rgba(255,255,255,0.25); font-style: italic; font-size: 0.75rem; }
+    .card-refresh-note {
+      font-size: 0.78rem; font-weight: 600;
+      color: #60a5fa;
+      background: rgba(96,165,250,0.1);
+      border: 1px solid rgba(96,165,250,0.2);
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .mock-ticker-price { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-weight: 500; margin-left: 8px; }
+    .mock-ticker-change { font-size: 0.78rem; font-weight: 600; margin-left: 4px; }
+
+    /* ─── SECTION SHARED ─────────────────────────────────── */
+    section { padding: 96px 5%; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 900;
+      color: var(--gray900);
+      line-height: 1.22;
+      max-width: 620px;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray500);
+      max-width: 560px;
+      margin-bottom: 56px;
+    }
+    .centered { text-align: center; margin-left: auto; margin-right: auto; }
+
+    /* ─── HOW IT WORKS ───────────────────────────────────── */
+    .how { background: var(--gray50); }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 1px solid var(--gray200);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+    }
+
+    .step-num {
+      width: 48px; height: 48px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+    }
+
+    .step-icon {
+      width: 52px; height: 52px;
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--gray100);
+      border-radius: 14px;
+      color: var(--navy);
+    }
+    .step-icon svg { width: 26px; height: 26px; }
+
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gray900);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--gray500);
+      line-height: 1.65;
+    }
+
+    .connector {
+      display: none;
+    }
+
+    /* ─── WHAT YOU GET ───────────────────────────────────── */
+    .features {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .features-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .features-visual {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 32px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .features-visual::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(26,86,219,0.25) 0%, transparent 70%);
+      top: -80px; right: -80px;
+      pointer-events: none;
+    }
+
+    .mock-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .mock-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .mock-ticker {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .mock-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+      letter-spacing: 0.5px;
+    }
+    .mock-tag.watch { background: rgba(245,158,11,0.2); color: var(--gold); }
+    .mock-tag.analysis { background: rgba(26,86,219,0.2); color: #93c5fd; }
+
+    .mock-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .mock-row strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    .mock-row .green { color: #4ade80; font-weight: 600; }
+    .mock-row .red { color: #f87171; font-weight: 600; }
+
+    .mock-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.38);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-style: italic;
+    }
+
+    .wa-preview {
+      background: #0f2042;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    .wa-preview .wa-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .wa-dot {
+      width: 36px; height: 36px;
+      background: var(--wa);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .wa-dot svg { width: 18px; height: 18px; }
+    .wa-preview .wa-name { font-size: 0.88rem; font-weight: 700; color: var(--white); }
+    .wa-preview .wa-sub { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+    .wa-bubble {
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px 10px 10px 2px;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.55;
+      max-width: 280px;
+    }
+    .wa-bubble strong { color: var(--gold); }
+
+    /* feature cards grid */
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feat-card {
+      background: var(--white);
+      border: 1px solid var(--gray200);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .feat-card .feat-icon {
+      width: 44px; height: 44px; background: #e8eeff;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      color: var(--blue2); margin-bottom: 16px;
+    }
+    .feat-card .feat-icon svg { width: 22px; height: 22px; }
+    .feat-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray900); margin-bottom: 8px; }
+    .feat-card p { font-size: 0.88rem; color: var(--gray500); line-height: 1.65; }
+    .feat-card-cta {
+      background: var(--navy);
+      border-color: var(--navy);
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .feat-card-cta h4 { color: #fff; }
+    @media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px) { .feat-grid { grid-template-columns: 1fr; } }
+
+    /* feature list (legacy, keep for compatibility) */
+    .feature-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+    .feature-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .feat-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: #e8eeff;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue2);
+    }
+    .feat-icon svg { width: 22px; height: 22px; }
+    .feat-text h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray900);
+      margin-bottom: 4px;
+    }
+    .feat-text p {
+      font-size: 0.88rem;
+      color: var(--gray500);
+      line-height: 1.6;
+    }
+
+    /* ─── MARKETS COVERED ────────────────────────────────── */
+    .markets { background: var(--navy); color: var(--white); }
+    .markets .section-title { color: var(--white); }
+    .markets .section-sub { color: rgba(255,255,255,0.6); }
+    .markets .section-label { color: var(--gold); }
+
+    .exchange-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .exchange-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .exchange-card:hover {
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-3px);
+    }
+    .exchange-card .ex-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .exchange-card .ex-full {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 14px;
+    }
+    .sector-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+    .sector-tag {
+      font-size: 0.7rem;
+      background: rgba(26,86,219,0.25);
+      color: #93c5fd;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────── */
+    .testimonials { background: var(--gray50); }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--gray200);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .review-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+
+    .stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 14px; }
+
+    .review-text {
+      font-size: 0.92rem;
+      color: var(--gray700);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .reviewer-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      color: var(--white);
+      font-weight: 700;
+    }
+    .reviewer-name { font-size: 0.9rem; font-weight: 700; color: var(--gray900); }
+    .reviewer-loc { font-size: 0.77rem; color: var(--gray400); }
+
+    /* ─── JOIN CTA ───────────────────────────────────────── */
+    .join-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #0b2d5e 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .join-cta::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(26,86,219,0.2) 0%, transparent 65%);
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .join-cta .section-title { color: var(--white); max-width: 700px; }
+    .join-cta .section-sub { color: rgba(255,255,255,0.65); max-width: 520px; }
+
+    .benefit-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 44px;
+      position: relative;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.88);
+      padding: 9px 18px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .pill .check { color: #4ade80; font-size: 0.9rem; }
+
+    .big-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--wa);
+      color: #fff;
+      padding: 18px 44px;
+      border-radius: 12px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 12px 36px rgba(37,211,102,0.35);
+      position: relative;
+    }
+    .big-cta:hover {
+      background: #1ebe5a;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 48px rgba(37,211,102,0.45);
+    }
+
+    .pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 15px;
+      border: 2px solid rgba(37,211,102,0.5);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.05); opacity: 0; }
+    }
+
+    .join-note {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 20px;
+    }
+
+    /* ─── FAQ ────────────────────────────────────────────── */
+    .faq { background: var(--white); }
+
+    .faq-list {
+      max-width: 740px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--gray200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      font-family: inherit;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--gray900);
+      text-align: left;
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--gray50); }
+    .faq-q .chevron {
+      font-size: 0.75rem;
+      color: var(--gray400);
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-q .chevron { transform: rotate(180deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s;
+      font-size: 0.9rem;
+      color: var(--gray500);
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+
+    /* ─── JOIN FORM ──────────────────────────────────────── */
+    .join-form-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .join-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 32px 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .form-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .form-header-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(26,86,219,0.25);
+      border: 1px solid rgba(26,86,219,0.4);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #93c5fd;
+    }
+    .form-header-icon svg { width: 18px; height: 18px; }
+    .form-header-title {
+      font-size: 0.97rem; font-weight: 700; color: #fff; margin-bottom: 3px;
+    }
+    .form-header-sub {
+      font-size: 0.74rem; color: rgba(255,255,255,0.4); line-height: 1.4;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .form-field label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.2px;
+    }
+    .field-hint {
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.76rem;
+    }
+    .form-field input {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-field input::placeholder { color: rgba(255,255,255,0.28); }
+    .form-field input:focus {
+      border-color: rgba(37,211,102,0.55);
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* phone field with country code dropdown */
+    .phone-input-wrap {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+      background: rgba(255,255,255,0.07);
+    }
+    .phone-input-wrap:focus-within {
+      border-color: rgba(37,211,102,0.55);
+      background: rgba(255,255,255,0.1);
+    }
+    .country-select {
+      flex-shrink: 0;
+      background: transparent;
+      border: none;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 13px 10px 13px 14px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      padding-right: 26px;
+      min-width: 90px;
+    }
+    .country-select option {
+      background: #0a1628;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .phone-input-wrap input[type="tel"] {
+      flex: 1;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 13px 16px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #fff;
+      outline: none;
+      min-width: 0;
+    }
+    .phone-input-wrap input[type="tel"]::placeholder { color: rgba(255,255,255,0.28); }
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--wa);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 28px;
+      margin-top: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.3);
+    }
+    .form-submit:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 12px 36px rgba(37,211,102,0.45); }
+    .form-submit svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .form-trust {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .form-trust span {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.75rem; color: rgba(255,255,255,0.35);
+    }
+    .form-trust svg { width: 12px; height: 12px; color: rgba(255,255,255,0.3); }
+    @media (max-width: 600px) {
+      .join-form { padding: 24px 20px 20px; }
+      .form-trust { gap: 12px; }
+    }
+
+    /* nav + footer styles live in components.js */
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+
+    @media (max-width: 1024px) {
+      /* Daily update two-col → single col */
+      .daily-update-inner { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .daily-update-wa { max-width: 460px; margin: 0 auto; }
+    }
+
+    @media (max-width: 900px) {
+      .stocks-grid { grid-template-columns: repeat(4, 1fr); }
+      .feat-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr !important; }
+      /* footer responsive handled in components.js */
+      .features-inner { gap: 28px; }
+      .stocks-table th:nth-child(3) { display: none; }
+      .stocks-table td:nth-child(3) { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 56px 4%; }
+      nav { padding: 0 4%; }
+      .nav-cta span { display: none; }
+      .stocks-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .ticker-item { padding: 0 18px; font-size: 0.88rem; }
+      .stocks-tabs { overflow-x: auto; white-space: nowrap; }
+      .stab { padding: 10px 14px; font-size: 0.78rem; }
+      .stocks-table { font-size: 0.78rem; }
+      .stocks-table th, .stocks-table td { padding: 9px 8px; }
+      .features-visual { padding: 20px; }
+      .dp-grid { grid-template-columns: 1fr; }
+      .review-grid { grid-template-columns: 1fr; }
+      .ticker-bar { padding: 3px 10px 2px; }
+      .ticker-status-badge { font-size: 0.6rem; }
+      .ticker-last-update { display: none; }
+      .faq-q { padding: 16px 16px; font-size: 0.9rem; }
+      .faq-a { padding: 0 16px; }
+      .faq-item.open .faq-a { padding: 0 16px 16px; }
+      .hero-delivery-badge { margin-bottom: 12px !important; }
+      .daily-update-section { padding-top: 40px !important; padding-bottom: 40px !important; }
+      .daily-update-wa { align-items: flex-start !important; margin: 0 !important; }
+      .wa-mock-card { max-width: 100% !important; width: 100% !important; }
+      .wa-caption { text-align: left !important; }
+    }
+
+    /* WhatsApp chat animation */
+    .wa-mock-card {
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .wa-mock-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+    }
+    .wa-icon-pulse {
+      animation: waPulse 3s ease-in-out infinite;
+    }
+    @keyframes waPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+    }
+    .typing-dots {
+      display: inline-flex; align-items: center; gap: 4px; padding: 4px 2px;
+    }
+    .typing-dots span {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      animation: typingBounce 1.2s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-5px); opacity: 1; }
+    }
+    .wa-line {
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .wa-line.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .delivered-tick {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .delivered-tick.show { opacity: 1; }
+
+    /* scroll fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ctc-popup { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+  </style>
+  <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
+  <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZDZMRBB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- global nav injected by components.js -->
+  <div id="g-nav"></div>
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <!-- ticker tape — populated by JS with live Finnhub data -->
+  <div class="ticker-wrap">
+    <div class="ticker-bar">
+      <div class="ticker-status-badge">
+        <span class="live-dot" id="ticker-dot"></span>
+        <span id="ticker-status-text">Loading market data…</span>
+      </div>
+      <span class="ticker-last-update" id="ticker-update-time"></span>
+    </div>
+    <div class="ticker-scroll">
+      <div class="ticker-track" id="ticker-track">
+        <!-- static fallback — replaced by live data once API key is set -->
+        <span class="ticker-item">AAPL <span class="up">▲ +1.24%</span></span>
+        <span class="ticker-item">NVDA <span class="up">▲ +2.87%</span></span>
+        <span class="ticker-item">MSFT <span class="up">▲ +0.91%</span></span>
+        <span class="ticker-item">AMZN <span class="up">▲ +1.55%</span></span>
+        <span class="ticker-item">GOOGL <span class="up">▲ +0.78%</span></span>
+        <span class="ticker-item">META <span class="up">▲ +3.12%</span></span>
+        <span class="ticker-item">TSLA <span class="down">▼ −0.63%</span></span>
+        <span class="ticker-item">BRK.B <span class="up">▲ +0.42%</span></span>
+        <span class="ticker-item">AVGO <span class="up">▲ +1.18%</span></span>
+        <span class="ticker-item">JPM <span class="down">▼ −0.22%</span></span>
+        <span class="ticker-item">LLY <span class="up">▲ +0.67%</span></span>
+        <span class="ticker-item">UNH <span class="down">▼ −0.35%</span></span>
+        <span class="ticker-item">V <span class="up">▲ +0.53%</span></span>
+        <span class="ticker-item">XOM <span class="up">▲ +0.81%</span></span>
+        <span class="ticker-item">MA <span class="up">▲ +0.61%</span></span>
+        <span class="ticker-item">COST <span class="up">▲ +0.44%</span></span>
+        <span class="ticker-item">HD <span class="down">▼ −0.18%</span></span>
+        <span class="ticker-item">WMT <span class="up">▲ +0.29%</span></span>
+        <span class="ticker-item">NFLX <span class="up">▲ +1.93%</span></span>
+        <span class="ticker-item">AMD <span class="up">▲ +1.73%</span></span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">AAPL <span class="up">▲ +1.24%</span></span>
+        <span class="ticker-item">NVDA <span class="up">▲ +2.87%</span></span>
+        <span class="ticker-item">MSFT <span class="up">▲ +0.91%</span></span>
+        <span class="ticker-item">AMZN <span class="up">▲ +1.55%</span></span>
+        <span class="ticker-item">GOOGL <span class="up">▲ +0.78%</span></span>
+        <span class="ticker-item">META <span class="up">▲ +3.12%</span></span>
+        <span class="ticker-item">TSLA <span class="down">▼ −0.63%</span></span>
+        <span class="ticker-item">BRK.B <span class="up">▲ +0.42%</span></span>
+        <span class="ticker-item">AVGO <span class="up">▲ +1.18%</span></span>
+        <span class="ticker-item">JPM <span class="down">▼ −0.22%</span></span>
+        <span class="ticker-item">LLY <span class="up">▲ +0.67%</span></span>
+        <span class="ticker-item">UNH <span class="down">▼ −0.35%</span></span>
+        <span class="ticker-item">V <span class="up">▲ +0.53%</span></span>
+        <span class="ticker-item">XOM <span class="up">▲ +0.81%</span></span>
+        <span class="ticker-item">MA <span class="up">▲ +0.61%</span></span>
+        <span class="ticker-item">COST <span class="up">▲ +0.44%</span></span>
+        <span class="ticker-item">HD <span class="down">▼ −0.18%</span></span>
+        <span class="ticker-item">WMT <span class="up">▲ +0.29%</span></span>
+        <span class="ticker-item">NFLX <span class="up">▲ +1.93%</span></span>
+        <span class="ticker-item">AMD <span class="up">▲ +1.73%</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── DAILY UPDATE — hero proof block ────────────────────── -->
+  <section class="daily-update-section" style="background:linear-gradient(135deg,var(--navy) 0%,#0b2d5e 100%); padding:80px 5%; position:relative; overflow:hidden;">
+    <div style="position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(37,211,102,0.08) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none;"></div>
+    <div class="daily-update-inner" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+
+      <!-- Left: copy -->
+      <div class="fade-in">
+        <!-- Badges row -->
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;">
+          <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.25);color:#4ade80;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:100px;">
+            <span style="width:6px;height:6px;border-radius:50%;background:#4ade80;animation:liveblink 2s infinite;display:inline-block;"></span>
+            Delivered Every Trading Day
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);color:#a5b4fc;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:100px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            AI-Screened Analysis
+          </div>
+        </div>
+
+        <h2 style="font-family:'Merriweather',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:18px;">Start Your Morning With Free Market Analysis<br><span style="color:var(--gold);">Before the US Market Opens</span></h2>
+        <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:32px;">Every morning before 9 AM ET, our AI screens thousands of data points across NYSE &amp; NASDAQ — and delivers a curated market data briefing directly to your WhatsApp. Free, always.</p>
+
+        <!-- AI stat mini card -->
+        <div style="background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:38px;height:38px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
+          </div>
+          <div>
+            <div style="font-size:0.78rem;font-weight:700;color:#a5b4fc;margin-bottom:2px;">AI screens <strong style="color:#fff;">10,000+ data points</strong> every morning</div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);">NYSE · NASDAQ · Volume · Sector data · Macro context</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
+            <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
+            Real live prices from US markets
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
+            <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
+            AI-screened — fresh market data every trading day
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
+            <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
+            Instant WhatsApp delivery — no spam filters
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
+            <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
+            Completely free — no subscription ever
+          </div>
+        </div>
+        <button class="btn-primary" id="wag1" type="button" data-hz-whatsapp-cta aria-haspopup="dialog" style="margin-top:32px;display:inline-flex;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Get Today's Free Market Briefing
+        </button>
+      </div>
+
+      <!-- Right: animated WA mock -->
+      <div class="fade-in daily-update-wa" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+        <div class="wa-mock-card" id="wa-mock-card" style="background:#111b21;border-radius:20px;padding:24px;width:100%;max-width:360px;box-shadow:0 24px 60px rgba(0,0,0,0.4);">
+          <!-- WA chat header -->
+          <div style="display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:16px;">
+            <div class="wa-icon-pulse" style="width:40px;height:40px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.9rem;font-weight:700;color:#fff;">US StockEdge · Daily Update</div>
+              <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="wa-time">9:00 AM ET · Live data</div>
+            </div>
+          </div>
+          <!-- Time label -->
+          <div style="text-align:center;margin-bottom:12px;">
+            <span style="background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.35);font-size:0.68rem;padding:3px 10px;border-radius:100px;">Today · 9:00 AM ET</span>
+          </div>
+          <!-- Typing dots (shown first) -->
+          <div id="wa-typing" style="background:#1f2c34;border-radius:12px 12px 12px 2px;padding:10px 14px;display:inline-block;margin-bottom:8px;">
+            <div class="typing-dots"><span></span><span></span><span></span></div>
+          </div>
+          <!-- Message bubble revealed line by line -->
+          <div id="wa-bubble" style="background:#1f2c34;border-radius:12px 12px 12px 2px;padding:14px 16px;font-size:0.85rem;line-height:1.85;color:rgba(255,255,255,0.88);display:none;">
+            <div class="wa-line" id="wa-l0" style="font-weight:700;color:var(--gold);margin-bottom:6px;">Top movers today:</div>
+            <div class="wa-line" id="wa-l1" style="margin-bottom:2px;"></div>
+            <div class="wa-line" id="wa-l2" style="margin-bottom:2px;"></div>
+            <div class="wa-line" id="wa-l3" style="margin-bottom:0;"></div>
+            <div class="wa-line" id="wa-l4" style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:8px;border-top:1px solid rgba(255,255,255,0.07);padding-top:8px;">Tap any stock above for full details.</div>
+          </div>
+          <div class="delivered-tick" id="wa-tick" style="text-align:right;font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:6px;">✓✓ Delivered</div>
+        </div>
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-align:center;font-style:italic;">* Live data · Updates every 90 seconds · Educational purposes only</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHY CHOOSE US ───────────────────────────────────────── -->
+  <section style="background:var(--gray50); padding:96px 5%;">
+    <div style="max-width:1100px; margin:0 auto;">
+
+      <!-- Header -->
+      <div style="text-align:center; margin-bottom:64px;" class="fade-in">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(26,86,219,0.12),rgba(99,102,241,0.12));border:1px solid rgba(26,86,219,0.2);color:var(--blue2);font-size:0.72rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          AI-Screened · Multi-Source Data
+        </div>
+        <h2 class="section-title centered" style="max-width:700px;">Why Thousands of US Investors Choose Us</h2>
+        <p class="section-sub centered">We combine <strong>multiple live data sources</strong> with <strong>AI-driven analysis</strong> to identify stocks worth researching — before the market opens.</p>
+      </div>
+
+      <!-- Three pillars -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px;" class="fade-in why-grid">
+
+        <!-- Diversify -->
+        <div style="background:var(--white);border:1px solid var(--gray200);border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(26,86,219,0.06) 0%,transparent 70%);pointer-events:none;"></div>
+          <div style="width:54px;height:54px;background:linear-gradient(135deg,#1a56db,#2563eb);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 8px 20px rgba(26,86,219,0.25);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">Diversify</div>
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--gray900);margin-bottom:12px;">Multiple Data Sources</h3>
+          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">We don't rely on a single data feed. Our system cross-references NYSE, NASDAQ, volume data, and macroeconomic signals from multiple providers simultaneously.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Real-time market feeds
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Economic calendar integration
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Cross-sector correlation
+            </div>
+          </div>
+        </div>
+
+        <!-- Analyse -->
+        <div style="background:var(--navy);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(99,102,241,0.2) 0%,transparent 70%);pointer-events:none;"></div>
+          <div style="width:54px;height:54px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 8px 20px rgba(99,102,241,0.35);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
+          </div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a5b4fc;margin-bottom:8px;">Analyse</div>
+          <h3 style="font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:12px;">AI-Driven Analysis</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">Our AI engine processes thousands of data points each morning — RSI, moving averages, volume patterns, and sector momentum — to identify stocks worth watching.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Technical pattern recognition
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Sentiment + volume analysis
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Multi-timeframe screening
+            </div>
+          </div>
+        </div>
+
+        <!-- Track -->
+        <div style="background:var(--white);border:1px solid var(--gray200);border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(16,163,127,0.07) 0%,transparent 70%);pointer-events:none;"></div>
+          <div style="width:54px;height:54px;background:linear-gradient(135deg,#0d9488,#10b981);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 8px 20px rgba(13,148,136,0.25);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0d9488;margin-bottom:8px;">Track</div>
+          <h3 style="font-size:1.2rem;font-weight:800;color:var(--gray900);margin-bottom:12px;">Sector Context</h3>
+          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">By tracking sector movements, price patterns, and macro context, our system identifies stocks drawing analyst attention for your own research.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Price pattern identification
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Sector movement tracking
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Macro &amp; economic context
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data flow visual bar -->
+      <div style="background:var(--white);border:1px solid var(--gray200);border-radius:16px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;" class="fade-in">
+        <div style="text-align:center;flex:1;min-width:100px;">
+          <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">Data Sources</div>
+          <div style="font-size:1.3rem;font-weight:800;color:var(--navy);">NYSE · NASDAQ</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">+ Macro feeds</div>
+        </div>
+        <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
+        <div style="text-align:center;flex:1;min-width:100px;">
+          <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">AI Processing</div>
+          <div style="font-size:1.3rem;font-weight:800;color:#6366f1;">10,000+</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Data points scanned daily</div>
+        </div>
+        <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
+        <div style="text-align:center;flex:1;min-width:100px;">
+          <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">Output</div>
+          <div style="font-size:1.3rem;font-weight:800;color:var(--navy);">2–3 Stocks</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Curated daily analysis</div>
+        </div>
+        <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
+        <div style="text-align:center;flex:1;min-width:100px;">
+          <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">Delivered</div>
+          <div style="font-size:1.3rem;font-weight:800;color:var(--wa);">WhatsApp</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">By 9:00 AM ET daily</div>
+        </div>
+      </div>
+
+      <p style="text-align:center;font-size:0.75rem;color:var(--gray400);margin-top:16px;">* All analysis is for educational purposes only and does not constitute financial advice.</p>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
+  <section class="how" id="how">
+    <div style="text-align:center; margin-bottom: 56px;" class="fade-in">
+      <span class="section-label">Simple Process</span>
+      <h2 class="section-title centered">How It Works</h2>
+      <p class="section-sub centered">From joining to receiving daily insights — it takes less than 60 seconds to get started.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>Join the Free Group</h3>
+        <p>Click any "Join" button on this page to enter our private WhatsApp group. No credit card, no signup form — just your phone.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>We Screen the Market</h3>
+        <p>Every morning before market open, our team runs technical scans across NYSE and NASDAQ to identify stocks with notable price and volume activity.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Receive Daily Analysis</h3>
+        <p>By 9 AM ET you get 2–3 stock profiles including ticker, technical summary, key price levels, and relevant market context.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">4</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6L15 17H9l-.7-2C6.3 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18" x2="14.5" y2="18"/></svg>
+        </div>
+        <h3>Make Informed Decisions</h3>
+        <p>Use the analysis as one input in your own research. Our insights are educational — your investment decisions are always your own.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT YOU GET ──────────────────────────────────────── -->
+  <section id="features" style="background: var(--white);">
+    <div class="features">
+      <div class="features-inner">
+
+        <!-- Section title — outside the card -->
+        <div class="fade-in" style="text-align:center; margin-bottom: 8px;">
+          <span class="section-label">S&amp;P 500 · Top 20 by Market Cap</span>
+          <h2 class="section-title centered">Live US Market Snapshot</h2>
+          <p class="section-sub centered" style="margin-bottom:0;">Real-time prices for the 20 largest US stocks. Click any tile to see full details.</p>
+        </div>
+
+        <!-- Live S&P 500 Top 20 panel -->
+        <div class="features-visual fade-in">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+            <div id="card-live-badge" class="live-badge delayed" style="margin-bottom:0;">
+              <span class="dot"></span> Live Market Data
+            </div>
+            <span class="card-refresh-note" id="card-refresh-time"></span>
+          </div>
+          <div>
+
+          <!-- Stock tiles grid -->
+          <div id="stocks-grid" class="stocks-grid">
+            <div class="stock-tile loading-tile"><div class="st-sym">AAPL</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">NVDA</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">MSFT</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">AMZN</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">GOOGL</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">META</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">TSLA</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">BRK.B</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">AVGO</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">JPM</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">LLY</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">UNH</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">V</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">XOM</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">MA</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">COST</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">HD</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">WMT</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">NFLX</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+            <div class="stock-tile loading-tile"><div class="st-sym">AMD</div><div class="st-price">—</div><div class="st-chg">—</div></div>
+          </div>
+
+          <!-- Tile click detail panel -->
+          <div id="detail-panel" class="detail-panel" style="display:none;">
+            <div class="dp-header">
+              <div>
+                <span class="dp-sym" id="dp-sym">—</span>
+                <span class="dp-price" id="dp-price">—</span>
+                <span class="dp-chg" id="dp-chg"></span>
+              </div>
+              <button class="dp-close" onclick="closeDetail()">✕</button>
+            </div>
+            <div class="dp-grid">
+              <div class="dp-row"><span>Day High</span><strong id="dp-high">—</strong></div>
+              <div class="dp-row"><span>Day Low</span><strong id="dp-low">—</strong></div>
+              <div class="dp-row"><span>Open</span><strong id="dp-open">—</strong></div>
+              <div class="dp-row"><span>Prev Close</span><strong id="dp-prev">—</strong></div>
+              <div class="dp-row"><span>Day Change $</span><strong id="dp-chgd">—</strong></div>
+              <div class="dp-row"><span>Day Range %</span><strong id="dp-vol">—</strong></div>
+            </div>
+            <p style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:10px;font-style:italic;">Educational purposes only. Not financial advice.</p>
+          </div>
+
+          <p class="mock-note" style="margin-top:14px;" id="card-note">* Click any stock above to see details. For educational purposes only.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT YOU RECEIVE ─────────────────────────────────────── -->
+  <section style="background:var(--gray50);" id="what-you-receive">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:56px;" class="fade-in">
+        <span class="section-label">What You Receive</span>
+        <h2 class="section-title centered">Everything You Need to Stay Informed</h2>
+        <p class="section-sub centered">Our daily briefings are designed for investors who want structured, data-driven market research — without the noise.</p>
+      </div>
+      <div class="feat-grid fade-in">
+        <div class="feat-card">
+          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h4>Pre-Market Stock Briefing</h4>
+          <p>2–3 US stock insights every trading day before 9 AM ET, covering technicals, sector trends, and key catalysts.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h4>Technical Analysis Summaries</h4>
+          <p>Key support/resistance levels, moving average context, RSI readings, and volume analysis for each stock.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h4>Sector &amp; Macro Context</h4>
+          <p>Fed calendar events, earnings weeks, sector rotations, and macro data that may influence the analysis.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h4>Community Discussion</h4>
+          <p>Ask questions, share research, and learn alongside thousands of US-focused investors in the group.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h4>Always Free — No Hidden Fees</h4>
+          <p>Completely free to join and remain. No subscriptions, no commissions, no consulting fees. Ever.</p>
+        </div>
+        <div class="feat-card feat-card-cta">
+          <div style="font-size:2rem;margin-bottom:12px;">📲</div>
+          <h4 style="color:#fff;">Ready to join?</h4>
+          <p style="color:rgba(255,255,255,0.6);margin-bottom:20px;">Get your first daily update this morning.</p>
+          <button type="button" class="btn-primary" id="wag1" data-hz-whatsapp-cta aria-haspopup="dialog" style="font-size:0.85rem;padding:10px 22px;">Get Today's Free Market Briefing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TOP GAINERS / LOSERS TABLE ──────────────────────────── -->
+  <section style="background:var(--gray50); padding: 72px 5%;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:36px;">
+        <span class="section-label">Market Movers</span>
+        <h2 class="section-title centered">Today's Top Gainers &amp; Losers</h2>
+        <p class="section-sub centered" style="margin-bottom:16px;">Live ranking of the S&amp;P 500 top 20 stocks — updated every 90 seconds.</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:32px;flex-wrap:wrap;">
+          <div id="table-live-badge" style="display:inline-flex;align-items:center;gap:6px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:#4ade80;font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">
+            <span style="width:6px;height:6px;border-radius:50%;background:#4ade80;animation:liveblink 2s infinite;display:inline-block;" id="table-dot"></span>
+            <span id="table-market-status">Live Data</span>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.2);color:#60a5fa;font-size:0.78rem;font-weight:600;padding:4px 12px;border-radius:100px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span id="table-update-time">Loading…</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--gray200); border-radius:16px; overflow:hidden;">
+        <div class="stocks-tabs" style="background:var(--gray50); border-bottom:1px solid var(--gray200);">
+          <button class="stab stab-light active" onclick="switchTab('gainers',this)">Top Gainers</button>
+          <button class="stab stab-light" onclick="switchTab('losers',this)">Top Losers</button>
+          <button class="stab stab-light" onclick="switchTab('marketcap',this)">By Market Cap</button>
+        </div>
+        <div class="stocks-table-scroll">
+          <table class="stocks-table stocks-table-light">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Symbol</th>
+                <th>Stock Name</th>
+                <th>Latest Price</th>
+                <th>Chg</th>
+                <th>%Chg</th>
+              </tr>
+            </thead>
+            <tbody id="stocks-tbody">
+              <tr><td colspan="6" style="text-align:center;color:var(--gray400);padding:24px;">Loading market data…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:var(--gray400); text-align:center; margin-top:12px;">* For educational purposes only. Not financial advice.</p>
+    </div>
+  </section>
+
+  <!-- ─── MARKETS COVERED ───────────────────────────────────── -->
+  <section class="markets fade-in" id="markets">
+    <div style="text-align:center; margin-bottom: 56px;">
+      <span class="section-label">Coverage</span>
+      <h2 class="section-title centered">US Exchanges We Cover</h2>
+      <p class="section-sub centered">We focus exclusively on US-listed equities across major exchanges and key sectors driving today's market.</p>
+    </div>
+    <div class="exchange-grid">
+      <div class="exchange-card">
+        <div class="ex-name">NYSE</div>
+        <div class="ex-full">New York Stock Exchange</div>
+        <div class="sector-tags">
+          <span class="sector-tag">Financials</span>
+          <span class="sector-tag">Energy</span>
+          <span class="sector-tag">Industrials</span>
+          <span class="sector-tag">Healthcare</span>
+        </div>
+      </div>
+      <div class="exchange-card">
+        <div class="ex-name">NASDAQ</div>
+        <div class="ex-full">Nasdaq Stock Market</div>
+        <div class="sector-tags">
+          <span class="sector-tag">Technology</span>
+          <span class="sector-tag">AI & Chips</span>
+          <span class="sector-tag">Biotech</span>
+          <span class="sector-tag">Consumer Tech</span>
+        </div>
+      </div>
+      <div class="exchange-card">
+        <div class="ex-name">S&P 500</div>
+        <div class="ex-full">Large-Cap Index Focus</div>
+        <div class="sector-tags">
+          <span class="sector-tag">Blue Chip</span>
+          <span class="sector-tag">Dividend</span>
+          <span class="sector-tag">Growth</span>
+        </div>
+      </div>
+      <div class="exchange-card">
+        <div class="ex-name">ETFs</div>
+        <div class="ex-full">Sector & Thematic Funds</div>
+        <div class="sector-tags">
+          <span class="sector-tag">QQQ</span>
+          <span class="sector-tag">SPY</span>
+          <span class="sector-tag">Sector ETFs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials">
+    <div style="text-align:center; margin-bottom: 56px;" class="fade-in">
+      <span class="section-label">Community</span>
+      <h2 class="section-title centered">What Members Are Saying</h2>
+      <p class="section-sub centered">Feedback from investors who use our daily insights as part of their research process.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The pre-market briefings save me hours of research. The technical levels are clear and the sector context really helps me understand what's moving and why."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <div class="reviewer-name">Michael T.</div>
+            <div class="reviewer-loc">Individual Investor · Austin, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I've been in the group for 4 months. The analysis is thorough and I appreciate that they always remind us this is for educational purposes — that's how it should be."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sarah K.</div>
+            <div class="reviewer-loc">Retail Investor · Chicago, IL</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"Great for staying on top of tech and semiconductor stocks. The NASDAQ coverage is really strong. Community discussions are also helpful for getting different perspectives."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">D</div>
+          <div>
+            <div class="reviewer-name">David R.</div>
+            <div class="reviewer-loc">Self-directed Investor · Seattle, WA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── FAQ ───────────────────────────────────────────────── -->
+  <section class="faq" id="faq">
+    <div style="text-align:center; margin-bottom: 48px;" class="fade-in">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title centered">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this service really free? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">Yes — joining and staying in the group is completely free. We do not charge subscription fees, commissions, or any form of payment. Our content is supported by the community itself.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this financial advice? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">No. All content shared in the group is for educational and informational purposes only. It does not constitute financial advice, investment recommendations, or a solicitation to buy or sell any security. Always do your own research and consult a licensed financial advisor before making investment decisions.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What US markets and sectors do you cover? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">We primarily focus on NYSE and NASDAQ-listed equities across all major sectors, with particular depth in technology, financials, energy, healthcare, and consumer stocks. We also cover select S&P 500 and sector ETFs when relevant.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What time are updates sent each day? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">Daily stock insights are delivered before 9:00 AM Eastern Time, giving you time to review the analysis before US market open at 9:30 AM ET. Additional context may be shared during the trading day when significant market events occur.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I leave the group anytime? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">Absolutely. You can exit the WhatsApp group at any time with no obligations. There are no lock-in periods or cancellation fees.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you guarantee any investment returns? <span class="chevron">▼</span>
+        </button>
+        <div class="faq-a">No. We do not guarantee any investment returns or outcomes. Stock market investing involves risk, and past market analysis does not guarantee future performance. All information is shared for educational purposes only.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- global footer injected by components.js -->
+  <div id="g-footer"></div>
+
+  <script>
+    // ── Data source config ────────────────────────────────────────────
+    // PRIMARY: Cloudflare Worker (caches server-side — all users share one fetch)
+    // FALLBACK: Finnhub direct (works but limited to ~3 simultaneous users)
+    //
+    // To activate Worker: deploy worker.js to Cloudflare Workers (free),
+    // then replace the URL below with your worker URL.
+    var WORKER_URL = 'https://stockedge-quotes.vtan6288.workers.dev';
+    var FINNHUB_KEY = 'd9goml9r01qq65376m60d9goml9r01qq65376m6g';
+
+    var DISPLAY_SYMBOLS = ['AAPL','NVDA','MSFT','AMZN','GOOGL','META','TSLA','BRK.B','AVGO','JPM','LLY','UNH','V','XOM','MA','COST','HD','WMT','NFLX','AMD'];
+    var COMPANY_NAMES = {
+      'AAPL':'Apple Inc.','NVDA':'NVIDIA Corporation','MSFT':'Microsoft Corp.',
+      'AMZN':'Amazon.com Inc.','GOOGL':'Alphabet Inc.','META':'Meta Platforms',
+      'TSLA':'Tesla Inc.','BRK.B':'Berkshire Hathaway','AVGO':'Broadcom Inc.',
+      'JPM':'JPMorgan Chase','LLY':'Eli Lilly & Co.','UNH':'UnitedHealth Group',
+      'V':'Visa Inc.','XOM':'Exxon Mobil Corp.','MA':'Mastercard Inc.',
+      'COST':'Costco Wholesale','HD':'Home Depot Inc.','WMT':'Walmart Inc.',
+      'NFLX':'Netflix Inc.','AMD':'Advanced Micro Devices'
+    };
+    var ANALYST_LEVELS = { support: 118.40, resistance: 134.60 };
+    var cachedQuotes = {};
+    var currentTab = 'gainers';
+
+    // Main: fetch from Cloudflare Worker (fast, cached, no rate limits)
+    // Falls back to direct Finnhub only if Worker completely fails
+    function fetchAllQuotes() {
+      // Cache-buster + no-store ensures the browser reads the latest KV payload
+      // from the Worker rather than an earlier incomplete response.
+      return fetch(WORKER_URL + '?t=' + Date.now(), { cache: 'no-store' }).then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).catch(function() {
+        // Direct Finnhub fallback (slower, used only if Worker is down)
+        var results = {};
+        return DISPLAY_SYMBOLS.reduce(function(chain, sym) {
+          return chain.then(function() {
+            return new Promise(function(res) { setTimeout(res, 200); });
+          }).then(function() {
+            return fetch('https://finnhub.io/api/v1/quote?symbol=' + sym + '&token=' + FINNHUB_KEY)
+              .then(function(r) { return r.json(); })
+              .then(function(d) { if (d && d.c > 0) results[sym] = d; })
+              .catch(function() {});
+          });
+        }, Promise.resolve()).then(function() { return results; });
+      });
+    }
+
+    function fmt(n, dec) {
+      if (dec === undefined) dec = 2;
+      if (n == null) return '—';
+      return n.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+
+    function isMarketOpen() {
+      var et = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+      var day = et.getDay(), mins = et.getHours() * 60 + et.getMinutes();
+      return day >= 1 && day <= 5 && mins >= 570 && mins < 960;
+    }
+
+    function nowET() {
+      return new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: true });
+    }
+
+    function calcRSI(closes, period) {
+      if (!period) period = 14;
+      if (!closes || closes.length < period + 1) return null;
+      var s = closes.slice(-(period + 1));
+      var g = 0, l = 0;
+      for (var i = 1; i < s.length; i++) {
+        var d = s[i] - s[i - 1];
+        if (d > 0) g += d; else l += Math.abs(d);
+      }
+      var ag = g / period, al = l / period;
+      return al === 0 ? 100 : Math.round(100 - 100 / (1 + ag / al));
+    }
+
+    function rsiLabel(rsi) {
+      if (rsi >= 70) return { text: 'Overbought', cls: 'red' };
+      if (rsi <= 30) return { text: 'Oversold', cls: 'green' };
+      return { text: 'Neutral', cls: '' };
+    }
+
+    // apiFetch removed — now using Yahoo Finance batch endpoint
+
+    function refreshCard() {
+      var dot = document.getElementById('ticker-dot');
+      var statusEl = document.getElementById('ticker-status-text');
+      // Single batch request — 1 Yahoo Finance call for all 20 symbols
+      return fetchAllQuotes().then(function(quoteMap) {
+        var quotes = DISPLAY_SYMBOLS.map(function(s) { return quoteMap[s] || {}; });
+        var open = isMarketOpen();
+        var et = nowET();
+
+        // Update ticker tape
+        var tickerItems = '';
+        for (var t = 0; t < DISPLAY_SYMBOLS.length; t++) {
+          var qt = quotes[t], pctt = qt.dp, pt = qt.c, upt = pctt >= 0;
+          tickerItems += '<span class="ticker-item">' + DISPLAY_SYMBOLS[t] +
+            ' <span class="t-price">$' + fmt(pt) + '</span>' +
+            ' <span class="' + (upt?'up':'down') + '">' + (upt?'▲':'▼') + ' ' + (upt?'+':'') + fmt(pctt) + '%</span></span>';
+        }
+        document.getElementById('ticker-track').innerHTML = tickerItems + tickerItems;
+        dot.className = 'live-dot' + (open ? '' : ' closed');
+        statusEl.textContent = open ? 'Market Open · Live Data' : 'Market Closed · Last session data';
+        document.getElementById('ticker-update-time').textContent = 'Updated ' + et + ' ET';
+
+        // Cache quotes (using display symbols as keys)
+        for (var i = 0; i < DISPLAY_SYMBOLS.length; i++) {
+          cachedQuotes[DISPLAY_SYMBOLS[i]] = quotes[i];
+        }
+        // Update tile grid
+        var tiles = document.querySelectorAll('.stock-tile');
+        for (var j = 0; j < DISPLAY_SYMBOLS.length; j++) {
+          var sym2 = DISPLAY_SYMBOLS[j], qj = quotes[j];
+          var pctj = qj.dp, pricej = qj.c, upj = pctj >= 0;
+          var tile = tiles[j];
+          if (!tile) continue;
+          tile.classList.remove('loading-tile','up-tile','down-tile');
+          tile.classList.add(upj ? 'up-tile' : 'down-tile');
+          tile.querySelector('.st-sym').textContent = sym2;
+          tile.querySelector('.st-price').textContent = '$' + fmt(pricej);
+          var chgEl2 = tile.querySelector('.st-chg');
+          chgEl2.textContent = (upj ? '▲ +' : '▼ ') + fmt(pctj) + '%';
+          chgEl2.className = 'st-chg ' + (upj ? 'up' : 'down');
+          tile.setAttribute('data-sym', sym2);
+          tile.onclick = function() { showDetail(this.getAttribute('data-sym')); };
+        }
+        // Update movers table
+        renderTable(currentTab);
+
+        // build top 3 movers by absolute % change
+        var ranked = [];
+        for (var k = 0; k < DISPLAY_SYMBOLS.length; k++) {
+          ranked.push({ sym: DISPLAY_SYMBOLS[k], q: quotes[k] });
+        }
+        ranked.sort(function(a, b) { return Math.abs(b.q.dp) - Math.abs(a.q.dp); });
+        var top3 = ranked.slice(0, 3);
+        var today = new Date().toLocaleDateString('en-US', { weekday:'long', month:'short', day:'numeric', timeZone:'America/New_York' });
+        var waLines = '<strong>Top movers today — ' + today + ':</strong><br>';
+        for (var m = 0; m < top3.length; m++) {
+          var s = top3[m], up2 = s.q.dp >= 0;
+          waLines += (m+1) + '. ' + s.sym + ' — $' + fmt(s.q.c) + ' <span style="color:' + (up2?'#4ade80':'#f87171') + '">' + (up2?'▲ +':'▼ ') + fmt(s.q.dp) + '%</span><br>';
+        }
+        // Populate animated line elements
+        if (top3[0]) { var s0=top3[0],u0=s0.q.dp>=0; var el0=document.getElementById('wa-l1'); if(el0) el0.innerHTML='1. '+s0.sym+' — $'+fmt(s0.q.c)+' <span style="color:'+(u0?'#4ade80':'#f87171')+'">'+(u0?'▲ +':'▼ ')+fmt(s0.q.dp)+'%</span>'; }
+        if (top3[1]) { var s1=top3[1],u1=s1.q.dp>=0; var el1=document.getElementById('wa-l2'); if(el1) el1.innerHTML='2. '+s1.sym+' — $'+fmt(s1.q.c)+' <span style="color:'+(u1?'#4ade80':'#f87171')+'">'+(u1?'▲ +':'▼ ')+fmt(s1.q.dp)+'%</span>'; }
+        if (top3[2]) { var s2=top3[2],u2=s2.q.dp>=0; var el2=document.getElementById('wa-l3'); if(el2) el2.innerHTML='3. '+s2.sym+' — $'+fmt(s2.q.c)+' <span style="color:'+(u2?'#4ade80':'#f87171')+'">'+(u2?'▲ +':'▼ ')+fmt(s2.q.dp)+'%</span>'; }
+        document.getElementById('wa-time').textContent = nowET() + ' ET · Live data';
+
+        var open = isMarketOpen();
+        var badge = document.getElementById('card-live-badge');
+        badge.innerHTML = open
+          ? '<span class="dot"></span> Live Market Data'
+          : '<span class="dot" style="background:var(--gold);animation:none"></span> Market Closed · Last session data';
+        badge.className = 'live-badge' + (open ? '' : ' delayed');
+        document.getElementById('card-refresh-time').textContent = 'Updated ' + nowET() + ' ET';
+
+        // Update table section timestamp
+        var tableTimeEl = document.getElementById('table-update-time');
+        var tableStatusEl = document.getElementById('table-market-status');
+        var tableDot = document.getElementById('table-dot');
+        var tableBadge = document.getElementById('table-live-badge');
+        if (tableTimeEl) tableTimeEl.textContent = 'Updated ' + nowET() + ' ET';
+        if (tableStatusEl) tableStatusEl.textContent = open ? 'Market Open' : 'Market Closed';
+        if (tableDot) { tableDot.style.background = open ? '#4ade80' : 'var(--gold)'; tableDot.style.animation = open ? 'liveblink 2s infinite' : 'none'; }
+        if (tableBadge) { tableBadge.style.background = open ? 'rgba(74,222,128,0.1)' : 'rgba(245,158,11,0.1)'; tableBadge.style.borderColor = open ? 'rgba(74,222,128,0.25)' : 'rgba(245,158,11,0.25)'; tableBadge.style.color = open ? '#4ade80' : 'var(--gold)'; }
+
+      }).catch(function(e) {
+        console.warn('Data error:', e);
+        dot.className = 'live-dot closed';
+        statusEl.textContent = 'Rate limited — auto-retrying in 60s';
+        document.getElementById('card-note').textContent = 'Data temporarily unavailable. Will retry automatically.';
+      });
+    }
+
+    function renderTable(tab) {
+      var rows = DISPLAY_SYMBOLS.map(function(sym) {
+        return { sym: sym, q: cachedQuotes[sym] };
+      });
+      if (tab === 'gainers') {
+        rows = rows.filter(function(r) { return r.q && r.q.dp > 0; });
+        rows.sort(function(a, b) { return b.q.dp - a.q.dp; });
+      } else if (tab === 'losers') {
+        rows = rows.filter(function(r) { return r.q && r.q.dp < 0; });
+        rows.sort(function(a, b) { return a.q.dp - b.q.dp; });
+      }
+      // marketcap = default order, no sort needed
+      var html = '';
+      for (var i = 0; i < rows.length; i++) {
+        var sym = rows[i].sym, q = rows[i].q;
+        if (!q) continue;
+        var up = q.dp >= 0;
+        var chgSign = up ? '+' : '';
+        html += '<tr onclick="showDetail(\'' + sym + '\')" data-sym="' + sym + '">' +
+          '<td class="td-no">' + (i+1) + '</td>' +
+          '<td class="td-sym">' + sym + '</td>' +
+          '<td class="td-name">' + (COMPANY_NAMES[sym] || sym) + '</td>' +
+          '<td class="td-price">$' + fmt(q.c) + '</td>' +
+          '<td class="' + (up?'td-up':'td-down') + '">' + chgSign + '$' + fmt(Math.abs(q.d)) + '</td>' +
+          '<td class="' + (up?'td-up':'td-down') + '">' + (up?'+':'') + fmt(q.dp) + '%</td>' +
+          '</tr>';
+      }
+      document.getElementById('stocks-tbody').innerHTML = html || '<tr><td colspan="6" style="text-align:center;color:rgba(255,255,255,0.3);padding:16px;">No data</td></tr>';
+    }
+
+    function switchTab(tab, btn) {
+      currentTab = tab;
+      document.querySelectorAll('.stab').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      closeDetail();
+      renderTable(tab);
+    }
+
+    function showDetail(sym) {
+      var q = cachedQuotes[sym];
+      if (!q) return;
+      var up = q.dp >= 0;
+
+      // highlight selected tile
+      document.querySelectorAll('.stock-tile').forEach(function(t) { t.classList.remove('selected'); });
+      document.querySelectorAll('.stock-tile').forEach(function(t) {
+        if (t.getAttribute('data-sym') === sym) t.classList.add('selected');
+      });
+
+      document.getElementById('dp-sym').textContent = sym;
+      document.getElementById('dp-price').textContent = '$' + fmt(q.c);
+
+      var chgEl = document.getElementById('dp-chg');
+      chgEl.textContent = (up ? '▲ +' : '▼ ') + fmt(q.dp) + '%';
+      chgEl.className = 'dp-chg ' + (up ? 'up' : 'down');
+
+      document.getElementById('dp-high').textContent = '$' + fmt(q.h);
+      document.getElementById('dp-low').textContent  = '$' + fmt(q.l);
+      document.getElementById('dp-open').textContent = '$' + fmt(q.o);
+      document.getElementById('dp-prev').textContent = '$' + fmt(q.pc);
+
+      var chgD = q.d;
+      var chgDEl = document.getElementById('dp-chgd');
+      chgDEl.textContent = (chgD >= 0 ? '+' : '') + '$' + fmt(Math.abs(chgD));
+      chgDEl.style.color = chgD >= 0 ? '#4ade80' : '#f87171';
+
+      // Day Range % = (High - Low) / Open * 100 — calculated from existing free data
+      var rangeEl = document.getElementById('dp-vol');
+      if (q.h && q.l && q.o && q.o > 0) {
+        var rangePct = ((q.h - q.l) / q.o * 100);
+        rangeEl.textContent = fmt(rangePct, 2) + '%';
+        rangeEl.style.color = rangePct > 3 ? '#f59e0b' : 'rgba(255,255,255,0.88)';
+      } else {
+        rangeEl.textContent = 'N/A';
+      }
+
+      document.getElementById('detail-panel').style.display = 'block';
+    }
+
+    function closeDetail() {
+      document.getElementById('detail-panel').style.display = 'none';
+      document.querySelectorAll('.stock-tile').forEach(function(t) { t.classList.remove('selected'); });
+    }
+
+    function refreshAll() {
+      refreshCard();
+    }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,0.3)' : 'none';
+    });
+
+    // nav hamburger handled by components.js
+
+    // ── WA card typing animation ──────────────────────────────
+    var waAnimated = false;
+
+    function playWaAnimation() {
+      if (waAnimated) return;
+      waAnimated = true;
+      var typing = document.getElementById('wa-typing');
+      var bubble = document.getElementById('wa-bubble');
+      var tick = document.getElementById('wa-tick');
+
+      // Step 1: show typing dots for 1.8s
+      setTimeout(function() {
+        typing.style.display = 'none';
+        bubble.style.display = 'block';
+
+        // Step 2: reveal title line
+        var l0 = document.getElementById('wa-l0');
+        if (l0) setTimeout(function() { l0.classList.add('show'); }, 100);
+
+        // Step 3: reveal stock lines
+        var lines = ['wa-l1','wa-l2','wa-l3'];
+        lines.forEach(function(id, i) {
+          var el = document.getElementById(id);
+          if (el) setTimeout(function() { el.classList.add('show'); }, 400 + i * 350);
+        });
+
+        // Step 4: reveal footer + tick
+        setTimeout(function() {
+          var l4 = document.getElementById('wa-l4');
+          if (l4) l4.classList.add('show');
+          if (tick) tick.classList.add('show');
+        }, 1600);
+
+      }, 1800);
+    }
+
+    // Trigger when card enters viewport
+    var waObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) playWaAnimation();
+      });
+    }, { threshold: 0.4 });
+
+    var waCard = document.getElementById('wa-mock-card');
+    if (waCard) waObserver.observe(waCard);
+
+    window.addEventListener('DOMContentLoaded', function() {
+      refreshAll();
+      setInterval(refreshAll, 90000); // 90s to stay within free tier rate limits
+    });
+  </script>
+  <script src="components.js"></script>
+  
+</body>
+</html>
