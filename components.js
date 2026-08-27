@@ -165,7 +165,7 @@
             <div class="logo-icon">' + CHART_ICON + '</div>\
             <span style="color:#fff;">US<em style="color:var(--gold, #f59e0b);">StockEdge</em></span>\
           </a>\
-          <p>Free daily US stock market analysis and research data delivered to investors via WhatsApp. For informational and educational purposes only.</p>\
+          <p>Free daily US stock market analysis and research data delivered to investors via WhatsApp. Currently available at no charge. For informational and educational purposes only.</p>\
         </div>\
         <div class="footer-links">\
           <h5>Quick Links</h5>\
