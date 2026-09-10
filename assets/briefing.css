@@ -1248,8 +1248,12 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
     white-space: nowrap;
   }
   .section-head { margin-bottom: 28px; }
-  .section-title { font-size: clamp(1.45rem, 7.2vw, 2rem); }
-  .section-sub { font-size: 0.92rem; margin-bottom: 28px; }
+  .section-title { font-size: clamp(1.4rem, 7vw, 1.9rem); }
+  .section-sub { font-size: 0.9rem; margin-bottom: 22px; line-height: 1.5; }
+  .brief-hero h2, .daily-update-section h2 { font-size: clamp(1.7rem, 8vw, 2.15rem); }
+  .brief-hero .section-sub, .daily-update-section .section-sub { font-size: 0.9rem; }
+  .check-row, .step-card p, .feat-card p, .pillar > p, .review-text, .faq-a { font-size: 0.88rem; line-height: 1.5; }
+  .faq-q { font-size: 0.95rem; }
   .flow-arrow { display: none; }
   .flow-rail { padding: 16px 12px; gap: 16px; }
   .board-toolbar { flex-wrap: wrap; gap: 8px; }

@@ -140,10 +140,10 @@
         <span>US<em>StockEdge</em></span>\
       </a>\
       <div class="nav-links">\
-        <a href="index.html#how">How It Works</a>\
-        <a href="index.html#features">What You Get</a>\
+        <a href="index.html#how">Process</a>\
+        <a href="index.html#features">Quotes</a>\
         <a href="index.html#markets">Markets</a>\
-        <a href="index.html#testimonials">How to use</a>\
+        <a href="index.html#testimonials">Use</a>\
         <a href="index.html#faq">FAQ</a>\
       </div>\
       <div class="nav-right">\
@@ -154,10 +154,10 @@
       </div>\
     </nav>\
     <div class="nav-drawer" id="navDrawer">\
-      <a href="index.html#how">How It Works</a>\
-      <a href="index.html#features">What You Get</a>\
+      <a href="index.html#how">Process</a>\
+      <a href="index.html#features">Quotes</a>\
       <a href="index.html#markets">Markets</a>\
-      <a href="index.html#testimonials">How to use</a>\
+      <a href="index.html#testimonials">Use</a>\
       <a href="index.html#faq">FAQ</a>\
       <a class="drawer-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Open WhatsApp invite</a>\
     </div>\
@@ -172,13 +172,13 @@
             <div class="logo-icon">' + CHART_ICON + '</div>\
             <span>US<em>StockEdge</em></span>\
           </a>\
-          <p>Educational summaries of publicly available US market data, delivered in an optional WhatsApp group. Not financial advice. Not a registered investment adviser.</p>\
+          <p>Educational US market recaps in an optional WhatsApp group. Not advice. Not a registered investment adviser.</p>\
         </div>\
         <div class="footer-links">\
           <h5>Quick Links</h5>\
           <ul>\
-            <li><a href="index.html#how">How It Works</a></li>\
-            <li><a href="index.html#features">What You Get</a></li>\
+            <li><a href="index.html#how">Process</a></li>\
+            <li><a href="index.html#features">Quotes</a></li>\
             <li><a href="/api/go-whatsapp.php" data-hz-whatsapp-cta target="_blank" rel="noopener noreferrer">WhatsApp invite</a></li>\
             <li><a href="index.html#faq">FAQ</a></li>\
           </ul>\
@@ -192,15 +192,15 @@
         </div>\
       </div>\
       <div class="disclaimer policy-banner" role="note">\
-        <strong>Educational information only.</strong>\
-        USStockEdge is not a registered investment adviser, broker-dealer, or bank.\
-        Nothing on this page is a recommendation to buy, sell, or hold any security.\
+        <strong>Educational only.</strong>\
+        Not a registered investment adviser, broker-dealer, or bank.\
+        Nothing here is a recommendation to buy, sell, or hold.\
         Investing involves risk, including possible loss of principal.\
-        Quotes shown here come from a third-party provider and may be delayed.\
+        Third-party quotes may be delayed.\
         <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\
       <div class="disclaimer">\
-        <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. <strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States.\
+        <strong>Disclaimer:</strong> Educational only — not financial, investment, or trading advice. We do not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not future results. Not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed or incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation claimed. <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\
       <div class="footer-copy">\
         &copy; 2026 USStockEdge. All rights reserved.\
