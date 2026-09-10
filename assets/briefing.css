@@ -199,18 +199,17 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 }
 
 .policy-banner {
-  background: #1a1408;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.35);
-  color: #e6d3a1;
-  font-size: 0.74rem;
-  line-height: 1.5;
-  padding: 8px 5%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 28px;
+  border-top: 1px solid rgba(214, 201, 164, 0.14);
+  color: rgba(246, 243, 234, 0.32);
+  font-size: 0.82rem;
+  line-height: 1.7;
   text-align: left;
   font-family: "IBM Plex Sans", sans-serif;
-  position: relative;
-  z-index: 2;
 }
-.policy-banner strong { color: #f3e2b0; }
+.policy-banner strong { color: rgba(246, 243, 234, 0.55); }
 
 /* Hero briefing desk */
 .daily-update-section,
@@ -988,7 +987,7 @@ body.legal-page::before { display: none; }
     linear-gradient(180deg, rgba(7,11,16,0.15), rgba(7,11,16,0.92)),
     var(--ink);
   border-bottom: 1px solid var(--line);
-  padding: 120px 5% 56px;
+  padding: 120px max(5%, calc((100% - 760px) / 2)) 56px;
   text-align: left;
 }
 .page-hero .badge {
@@ -1027,6 +1026,7 @@ body.legal-page::before { display: none; }
   border: 1px solid #d8d0bc;
   padding: 22px 24px;
   margin-bottom: 44px;
+  width: 100%;
 }
 .policy-toc h2 {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -1236,7 +1236,7 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
   .ticker-bar { flex-wrap: wrap; padding: 6px 12px 4px; }
   .ticker-status-badge { font-size: 0.6rem; letter-spacing: 0.08em; }
   .ticker-last-update { font-size: 0.6rem; margin-left: auto; }
-  .policy-banner { font-size: 0.7rem; padding: 8px 4%; }
+  .policy-banner { font-size: 0.78rem; }
   .daily-update-section, .brief-hero { padding: 28px 4% 40px !important; }
   .page-hero { padding: 100px 4% 40px; }
   .policy-wrap { padding: 40px 4% 72px; }

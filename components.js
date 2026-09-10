@@ -191,6 +191,14 @@
           </ul>\
         </div>\
       </div>\
+      <div class="disclaimer policy-banner" role="note">\
+        <strong>Educational information only.</strong>\
+        USStockEdge is not a registered investment adviser, broker-dealer, or bank.\
+        Nothing on this page is a recommendation to buy, sell, or hold any security.\
+        Investing involves risk, including possible loss of principal.\
+        Quotes shown here come from a third-party provider and may be delayed.\
+        <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
+      </div>\
       <div class="disclaimer">\
         <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. <strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\
