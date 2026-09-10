@@ -650,7 +650,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   display: inline-flex; align-items: center; gap: 6px;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
-  padding: 4px 8px; border-radius: 0; margin-bottom: 0;
+  padding: 0 8px; border-radius: 0; margin: 0;
   line-height: 1;
   background: transparent; border: 1px solid rgba(61,207,138,0.35); color: var(--tick);
 }
@@ -667,9 +667,10 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   color: var(--cream);
   background: transparent;
   border: 1px solid var(--line);
-  padding: 4px 8px; border-radius: 0;
-  min-height: 22px;
+  padding: 0 8px;
+  border-radius: 0;
 }
+.card-refresh-note:empty { visibility: hidden; }
 .detail-panel {
   background: #0a1016;
   border: 1px solid var(--line-strong);
@@ -850,10 +851,18 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 }
 .board-toolbar {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 16px;
+}
+.board-toolbar .live-badge,
+.board-toolbar .card-refresh-note {
+  height: 28px;
+  box-sizing: border-box;
+  margin: 0;
+  align-self: center;
 }
 .feat-emoji { font-size: 1.4rem; margin-bottom: 12px; }
 .narrow { max-width: 1180px; margin: 0 auto; }
@@ -1254,7 +1263,7 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
   .faq-q { font-size: 0.95rem; }
   .flow-arrow { display: none; }
   .flow-rail { padding: 16px 12px; gap: 16px; }
-  .board-toolbar { flex-wrap: wrap; gap: 8px; }
+  .board-toolbar { flex-wrap: nowrap; gap: 8px; }
   .daily-update-section, .brief-hero { padding: 28px 4% 40px !important; }
   .page-hero { padding: 100px 4% 40px; }
   .policy-wrap { padding: 40px 4% 72px; }
