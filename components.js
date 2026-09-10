@@ -8,7 +8,6 @@
 
   /* ─── Shared CSS ──────────────────────────────────────────────────────── */
   var SHARED_CSS = '\
-    /* ─── NAV ──────────────────────────────────────────────────── */\
     nav {\
       position: fixed;\
       top: 0; left: 0; right: 0;\
@@ -17,107 +16,115 @@
       align-items: center;\
       justify-content: space-between;\
       padding: 0 5%;\
-      height: 68px;\
-      background: rgba(10,22,40,0.97);\
-      backdrop-filter: blur(8px);\
-      border-bottom: 1px solid rgba(255,255,255,0.06);\
-      transition: box-shadow 0.3s;\
+      height: 64px;\
+      background: rgba(7,11,16,0.94);\
+      backdrop-filter: blur(10px);\
+      border-bottom: 1px solid rgba(214,201,164,0.14);\
     }\
     .nav-logo {\
       display: flex; align-items: center; gap: 10px; text-decoration: none;\
     }\
-    .nav-logo .logo-icon svg { width: 20px; height: 20px; }\
+    .nav-logo .logo-icon img { border-radius: 2px; }\
     .nav-logo span {\
-      font-weight: 700; font-size: 1.05rem; color: var(--white, #fff);\
-      letter-spacing: -0.3px;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      font-weight: 600; font-size: 0.92rem; color: #f6f3ea;\
+      letter-spacing: 0.04em;\
     }\
-    .nav-logo span em { color: var(--gold, #f59e0b); font-style: normal; }\
-    .nav-links {\
-      display: flex; align-items: center; gap: 6px;\
-    }\
+    .nav-logo span em { color: #d4a017; font-style: normal; }\
+    .nav-links { display: flex; align-items: center; gap: 2px; }\
     .nav-links a {\
-      color: rgba(255,255,255,0.65); text-decoration: none;\
-      font-size: 0.875rem; font-weight: 500;\
-      padding: 6px 12px; border-radius: 6px;\
+      color: rgba(246,243,234,0.58); text-decoration: none;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      font-size: 0.68rem; font-weight: 600;\
+      letter-spacing: 0.1em; text-transform: uppercase;\
+      padding: 7px 10px; border-radius: 0;\
       transition: color 0.15s, background 0.15s; white-space: nowrap;\
     }\
-    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }\
-    .nav-right { display: flex; align-items: center; gap: 20px; }\
+    .nav-links a:hover { color: #f6f3ea; background: rgba(246,243,234,0.06); }\
+    .nav-right { display: flex; align-items: center; gap: 16px; }\
     .nav-cta {\
       display: inline-flex; align-items: center; gap: 8px;\
-      background: var(--wa, #25D366); color: #fff;\
-      padding: 9px 20px; border-radius: 8px;\
-      font-size: 0.88rem; font-weight: 600; text-decoration: none;\
-      transition: background 0.2s, transform 0.15s;\
-      border: 0; cursor: pointer; font-family: inherit;\
+      background: #25d366; color: #070b10;\
+      padding: 8px 14px; border-radius: 2px;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      font-size: 0.68rem; font-weight: 600;\
+      letter-spacing: 0.1em; text-transform: uppercase;\
+      text-decoration: none; border: 1px solid #25d366; cursor: pointer;\
     }\
-    .nav-cta:hover { background: #1ebe5a; transform: translateY(-1px); }\
+    .nav-cta:hover { filter: brightness(1.06); }\
     .nav-hamburger {\
       display: none; flex-direction: column; gap: 5px; cursor: pointer;\
       padding: 6px; background: none; border: none; font-family: inherit;\
     }\
     .nav-hamburger span {\
-      display: block; width: 22px; height: 2px;\
-      background: rgba(255,255,255,0.8); border-radius: 2px;\
+      display: block; width: 22px; height: 1px;\
+      background: #d6c9a4; border-radius: 0;\
       transition: transform 0.25s, opacity 0.25s;\
     }\
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }\
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }\
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }\
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }\
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }\
     .nav-drawer {\
       display: none; position: fixed;\
-      top: 68px; left: 0; right: 0;\
-      background: rgba(10,22,40,0.98); backdrop-filter: blur(10px);\
-      border-bottom: 1px solid rgba(255,255,255,0.08);\
-      padding: 12px 5% 18px; z-index: 99; flex-direction: column; gap: 2px;\
+      top: 64px; left: 0; right: 0;\
+      background: #070b10;\
+      border-bottom: 1px solid rgba(214,201,164,0.14);\
+      padding: 10px 5% 16px; z-index: 99; flex-direction: column; gap: 2px;\
     }\
     .nav-drawer.open { display: flex; }\
     .nav-drawer a, .nav-drawer button {\
-      color: rgba(255,255,255,0.7); text-decoration: none;\
-      font-size: 0.95rem; font-weight: 500;\
-      padding: 11px 14px; border-radius: 8px;\
-      transition: background 0.15s, color 0.15s;\
-      border: 0; font-family: inherit; cursor: pointer;\
+      color: rgba(246,243,234,0.7); text-decoration: none;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      font-size: 0.78rem; font-weight: 500;\
+      letter-spacing: 0.06em; text-transform: uppercase;\
+      padding: 12px 0; border-radius: 0;\
+      border: 0; background: none; cursor: pointer; text-align: left;\
     }\
-    .nav-drawer a:hover, .nav-drawer button:hover { background: rgba(255,255,255,0.08); color: #fff; }\
+    .nav-drawer a:hover, .nav-drawer button:hover { color: #f6f3ea; }\
     .nav-drawer .drawer-cta {\
-      margin-top: 8px; background: var(--wa, #25D366); color: #fff;\
-      text-align: center; font-weight: 700; border-radius: 10px; padding: 13px;\
+      margin-top: 8px; background: #25d366; color: #070b10;\
+      text-align: center; font-weight: 600; border-radius: 2px; padding: 12px;\
     }\
-    .nav-drawer .drawer-cta:hover { background: #1ebe5a; }\
     @media (max-width: 820px) {\
       .nav-links { display: none; }\
       .nav-hamburger { display: flex; }\
       .nav-right .nav-cta { display: none; }\
     }\
-    /* ─── FOOTER ────────────────────────────────────────────────── */\
     footer {\
-      background: var(--gray900, #0f172a);\
-      color: rgba(255,255,255,0.45);\
+      background: #05080c;\
+      color: rgba(246,243,234,0.45);\
       padding: 48px 5% 32px;\
       font-size: 0.82rem;\
+      border-top: 1px solid rgba(214,201,164,0.14);\
     }\
     .footer-inner {\
-      max-width: 1100px; margin: 0 auto;\
+      max-width: 1180px; margin: 0 auto;\
       display: grid; grid-template-columns: 1.6fr 1fr 1fr;\
       gap: 48px; margin-bottom: 40px;\
     }\
     .footer-brand .nav-logo { margin-bottom: 14px; }\
-    .footer-brand p { color: rgba(255,255,255,0.38); line-height: 1.65; font-size: 0.82rem; }\
+    .footer-brand p { color: rgba(246,243,234,0.42); line-height: 1.65; font-size: 0.82rem; }\
     .footer-links h5 {\
-      color: rgba(255,255,255,0.7); font-size: 0.82rem; font-weight: 700;\
-      letter-spacing: 0.5px; margin-bottom: 14px;\
+      color: #d6c9a4; font-size: 0.68rem; font-weight: 600;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;\
     }\
     .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }\
-    .footer-links a, .footer-links button { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }\
+    .footer-links a, .footer-links button { color: rgba(246,243,234,0.42); text-decoration: none; }\
     .footer-links button { padding: 0; border: 0; background: none; font: inherit; cursor: pointer; }\
-    .footer-links a:hover { color: rgba(255,255,255,0.75); }\
+    .footer-links a:hover { color: #f6f3ea; }\
     .disclaimer {\
-      max-width: 1100px; margin: 0 auto;\
-      padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07);\
-      line-height: 1.7; color: rgba(255,255,255,0.28);\
+      max-width: 1180px; margin: 0 auto;\
+      padding-top: 28px; border-top: 1px solid rgba(214,201,164,0.14);\
+      line-height: 1.7; color: rgba(246,243,234,0.32);\
     }\
-    .disclaimer strong { color: rgba(255,255,255,0.4); }\
+    .disclaimer strong { color: rgba(246,243,234,0.55); }\
+    .footer-copy {\
+      max-width: 1180px; margin: 20px auto 0; padding-top: 20px;\
+      border-top: 1px solid rgba(214,201,164,0.1);\
+      text-align: center; font-size: 0.72rem; color: rgba(246,243,234,0.28);\
+      font-family: "IBM Plex Mono", ui-monospace, monospace; letter-spacing: 0.08em;\
+    }\
     @media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr; gap: 28px; } }\
   ';
 
@@ -161,9 +168,9 @@
     <footer>\
       <div class="footer-inner">\
         <div class="footer-brand">\
-          <a class="nav-logo" href="index.html" style="margin-bottom:14px; display:inline-flex;">\
+          <a class="nav-logo" href="index.html">\
             <div class="logo-icon">' + CHART_ICON + '</div>\
-            <span style="color:#fff;">US<em style="color:var(--gold, #f59e0b);">StockEdge</em></span>\
+            <span>US<em>StockEdge</em></span>\
           </a>\
           <p>Educational summaries of publicly available US market data, delivered in an optional WhatsApp group. Not financial advice. Not a registered investment adviser.</p>\
         </div>\
@@ -187,7 +194,7 @@
       <div class="disclaimer">\
         <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. <strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\
-      <div style="max-width:1100px;margin:20px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.2);">\
+      <div class="footer-copy">\
         &copy; 2026 USStockEdge. All rights reserved.\
       </div>\
     </footer>\

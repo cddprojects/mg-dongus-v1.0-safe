@@ -74,7 +74,9 @@ button[data-hz-whatsapp-cta] {
   padding: 0 0.8rem 0 0.05rem;
   white-space: nowrap;
   pointer-events: none;
-  font: 700 1rem/1 "Inter", system-ui, sans-serif;
+  font: 600 0.78rem/1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   opacity: 0;
   transform: translateX(0.4rem);
   transition: opacity 150ms ease 70ms, transform 210ms ease 30ms;
@@ -115,9 +117,9 @@ button[data-hz-whatsapp-cta] {
   max-height: min(90vh, 52rem);
   max-height: min(90dvh, 52rem);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 1.5rem;
-  background: #fff;
+  border: 1px solid #d8d0bc;
+  border-radius: 2px;
+  background: #fffdf7;
   box-shadow: var(--hz-wa-shadow);
   color: var(--hz-wa-ink);
   transform: translateY(1rem) scale(0.975);
@@ -133,9 +135,9 @@ button[data-hz-whatsapp-cta] {
   justify-content: flex-start;
   gap: 1rem;
   padding: 1.5rem 4rem 1.25rem 1.5rem;
-  border-bottom: 3px solid #25D366;
+  border-bottom: 1px solid #d8d0bc;
   text-align: left;
-  background: linear-gradient(180deg, #effafa 0%, #f9fdfd 100%);
+  background: #070b10;
 }
 
 .hz-whatsapp__header > div { min-width: 0; }
@@ -156,16 +158,17 @@ button[data-hz-whatsapp-cta] {
 
 .hz-whatsapp__title {
   margin: 0;
-  font: 600 clamp(1.2rem, 2.5vw, 1.45rem)/1.25 "Inter", system-ui, sans-serif;
+  font: 500 clamp(1.2rem, 2.5vw, 1.45rem)/1.25 "Newsreader", "Merriweather", serif;
   letter-spacing: -0.025em;
-  color: var(--hz-wa-ink);
+  color: #f6f3ea;
 }
 
 .hz-whatsapp__intro {
   max-width: 27rem;
   margin: 0.25rem 0 0;
   color: var(--hz-wa-muted);
-  font: 500 0.88rem/1.5 "Inter", system-ui, sans-serif;
+  font: 500 0.88rem/1.5 "IBM Plex Sans", system-ui, sans-serif;
+  color: rgba(246,243,234,0.58);
 }
 
 .hz-whatsapp__close {
@@ -180,13 +183,13 @@ button[data-hz-whatsapp-cta] {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  color: #344054;
-  background: rgba(12, 18, 34, 0.07);
+  color: #d6c9a4;
+  background: rgba(246, 243, 234, 0.08);
   cursor: pointer;
   transition: transform 160ms ease, color 160ms ease;
 }
 
-.hz-whatsapp__close:hover { transform: rotate(6deg); color: var(--hz-wa-ink); }
+.hz-whatsapp__close:hover { transform: none; color: #f6f3ea; }
 .hz-whatsapp__close svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 
 .hz-whatsapp__form {
@@ -216,7 +219,7 @@ body.hz-whatsapp-modal-open { overflow: hidden !important; touch-action: none; }
     width: 100%;
     max-height: calc(100vh - 1.5rem);
     max-height: calc(100dvh - max(1.5rem, env(safe-area-inset-bottom)));
-    border-radius: 1.25rem;
+    border-radius: 2px;
   }
   .hz-whatsapp__header { gap: 0.75rem; padding: 1.2rem 3.5rem 1.05rem 1rem; }
   .hz-whatsapp__header-icon { width: 3rem; height: 3rem; flex-basis: 3rem; }
