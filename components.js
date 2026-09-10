@@ -193,7 +193,6 @@
           <ul>\
             <li><a href="index.html#how">Process</a></li>\
             <li><a href="index.html#features">Quotes</a></li>\
-            <li><a href="/api/go-whatsapp.php" data-hz-whatsapp-cta target="_blank" rel="noopener noreferrer">WhatsApp invite</a></li>\
             <li><a href="index.html#faq">FAQ</a></li>\
           </ul>\
         </div>\
