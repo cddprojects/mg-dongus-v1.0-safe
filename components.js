@@ -115,7 +115,7 @@
     .footer-links a:hover { color: #f6f3ea; }\
     .footer-biz {\
       max-width: 1180px; margin: 0 auto;\
-      padding: 28px 0 0; margin-top: 36px;\
+      padding: 28px 0 36px; margin-top: 36px;\
       border-top: 1px solid rgba(214,201,164,0.14);\
       font-size: 0.78rem; line-height: 1.65;\
       color: rgba(246,243,234,0.38);\
@@ -126,6 +126,7 @@
       letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;\
     }\
     .footer-biz p { margin: 0 0 6px; }\
+    .footer-biz p:last-child { margin-bottom: 0; }\
     .footer-biz a { color: rgba(246,243,234,0.55); }\
     .disclaimer {\
       max-width: 1180px; margin: 0 auto;\
