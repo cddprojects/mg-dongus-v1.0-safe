@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/briefing.css?v=20260910-4" />
+  <link rel="stylesheet" href="assets/briefing.css?v=20260910-5" />
 
   <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
   <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
@@ -90,16 +90,16 @@
         <div class="chip-row">
           <div class="chip live">
             <span class="live-dot"></span>
-            Delivered Every Trading Day
+            Pre-market public data
           </div>
           <div class="chip">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            Public-Data Briefing
+            Weekday mornings
           </div>
         </div>
 
         <h2>Start Your Morning With an Educational Market Briefing<br><span>Before the US Market Opens</span></h2>
-        <p class="section-sub">On most US trading mornings before 9 AM ET, we summarize publicly available NYSE and NASDAQ price, volume, and sector data and share that recap in a WhatsApp group. This is educational information, not personalized advice.</p>
+        <p class="section-sub">On most US trading mornings before 9 AM ET, we summarize publicly available NYSE and NASDAQ price, volume, and sector data for the tickers we track. That recap is shared in a WhatsApp group. It is not a highlighted shortlist. This is educational information, not personalized advice.</p>
 
         <!-- AI stat mini card -->
         <div class="stat-chip">
@@ -115,11 +115,11 @@
         <div class="check-list">
           <div class="check-row">
             <span class="check-mark">✓</span>
-            Third-party quotes for selected US-listed tickers (may be delayed)
+            Recap of the tickers we track, up and down — not a curated list
           </div>
           <div class="check-row">
             <span class="check-mark">✓</span>
-            Educational recap of public data on most trading days
+            Sector and public macro headlines already in the news
           </div>
           <div class="check-row">
             <span class="check-mark">✓</span>
@@ -155,11 +155,11 @@
           </div>
           <!-- Message bubble revealed line by line -->
           <div id="wa-bubble" class="wa-bubble" style="display:none;">
-            <div class="wa-line wa-headline" id="wa-l0">Example of public price moves:</div>
+            <div class="wa-line wa-headline" id="wa-l0">Example recap (public data):</div>
             <div class="wa-line" id="wa-l1"></div>
             <div class="wa-line" id="wa-l2"></div>
             <div class="wa-line" id="wa-l3"></div>
-            <div class="wa-line wa-foot" id="wa-l4">Educational example only. Not a buy or sell recommendation.</div>
+            <div class="wa-line wa-foot" id="wa-l4">Educational summary of public data only. Not a ranking of best or worst investments.</div>
           </div>
           <div class="delivered-tick wa-tick" id="wa-tick">✓✓ Delivered</div>
         </div>
@@ -192,7 +192,7 @@
           </div>
           <div class="kicker">Diversify</div>
           <h3>Multiple Data Sources</h3>
-          <p>On-page quotes come from a third-party market-data provider. Briefings discuss publicly listed NYSE and NASDAQ tickers plus publicly reported volume and macro headlines. Data can be delayed or incomplete.</p>
+          <p>On-page quotes come from a third-party market-data provider and may be delayed or incomplete. Briefings reference publicly listed NYSE and Nasdaq tickers, publicly reported volume, and macro headlines already in the news.</p>
           <div class="bullet-list">
             <div class="bullet">Third-party quotes (may be delayed)</div>
             <div class="bullet">Public economic-calendar headlines</div>
@@ -207,10 +207,10 @@
           </div>
           <div class="kicker">Analyse</div>
           <h3>Educational Data Recap</h3>
-          <p>Briefings may mention commonly published technical figures such as moving averages, RSI, or volume — only as public-data context. These figures are not signals to trade and are not personalized to you.</p>
+          <p>When we mention a widely published figure like trading volume, we're citing it as context, not as a signal. We don't tell you what to do with any figure we mention.</p>
           <div class="bullet-list">
-            <div class="bullet">Public technical figures, when cited</div>
             <div class="bullet">Reported volume and price changes</div>
+            <div class="bullet">Public headlines, when cited</div>
             <div class="bullet">No guaranteed outcomes</div>
           </div>
         </div>
@@ -222,7 +222,7 @@
           </div>
           <div class="kicker">Track</div>
           <h3>Sector Context</h3>
-          <p>We may note sector moves and public macro headlines so you can place a ticker in context. Mention of a ticker is not a recommendation and does not mean it is a good investment.</p>
+          <p>We may note that a sector moved or that a macro event is scheduled. Naming a ticker or sector is not an endorsement and doesn't mean it's a good or bad investment.</p>
           <div class="bullet-list">
             <div class="bullet">Public price-change context</div>
             <div class="bullet">Sector headlines from public sources</div>
@@ -234,27 +234,27 @@
       <!-- Data flow visual bar -->
       <div class="flow-rail fade-in">
         <div class="flow-cell">
-          <div class="flow-label">Data Sources</div>
+          <div class="flow-label">Public data</div>
           <div class="flow-value">NYSE · NASDAQ</div>
           <div class="flow-note">+ Macro feeds</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-cell">
-          <div class="flow-label">AI Processing</div>
-          <div class="flow-value">Public data</div>
-          <div class="flow-note">Reviewed for an educational recap</div>
+          <div class="flow-label">Review</div>
+          <div class="flow-value">Human review</div>
+          <div class="flow-note">Checked for an accurate recap</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-cell">
           <div class="flow-label">Output</div>
-          <div class="flow-value">2–3 tickers</div>
-          <div class="flow-note">Educational summaries, not picks</div>
+          <div class="flow-value">Unranked recap</div>
+          <div class="flow-note">Not a shortlist of picks</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-cell">
           <div class="flow-label">Delivered</div>
           <div class="flow-value">WhatsApp</div>
-          <div class="flow-note">By 9:00 AM ET daily</div>
+          <div class="flow-note">Before 9:00 AM ET on most trading days</div>
         </div>
       </div>
 
@@ -292,7 +292,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
         <h3>Receive an educational recap</h3>
-        <p>When a briefing is sent, it typically covers 2–3 tickers using public prices, published technical figures, and public news context. That is not a recommendation list.</p>
+        <p>When a briefing is sent, it recaps the tickers we track using public prices, reported volume, and public news context. Names are not ranked and this is not a recommendation list.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">4</div>
@@ -392,12 +392,7 @@
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
           <h4>Pre-market data recap</h4>
-          <p>On most trading mornings before 9 AM ET, a short recap of 2–3 tickers using public prices, published technical figures, and public headlines.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <h4>Published technical figures</h4>
-          <p>When we mention moving averages, RSI, or volume, those figures come from public or third-party data and can be wrong or stale. They are not trade signals.</p>
+          <p>On most trading mornings before 9 AM ET, a recap of the tickers we track using public prices, reported volume, and public headlines. It is not a shortlist of picks.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
@@ -424,13 +419,13 @@
     </div>
   </section>
 
-  <!-- ─── TOP GAINERS / LOSERS TABLE ──────────────────────────── -->
+  <!-- ─── ALL 20 TICKERS TABLE ──────────────────────────── -->
   <section class="movers">
     <div class="narrow">
       <div class="section-head">
-        <span class="section-label">Market Movers</span>
-        <h2 class="section-title centered">Price changes among the 20 tickers shown</h2>
-        <p class="section-sub centered">Sorted from the same fixed 20-ticker list on this page — not a complete S&amp;P 500 ranking. Quotes refresh periodically and may be delayed.</p>
+        <span class="section-label">Quote table</span>
+        <h2 class="section-title centered">All 20 tickers we track</h2>
+        <p class="section-sub centered">This shows all 20 tickers we track, sorted by today's price change, in both directions. It is a complete list, not a shortlist of recommendations — nothing here was selected or ranked by preference. Quotes refresh periodically and may be delayed.</p>
         <div class="table-meta">
           <div id="table-live-badge" class="status-pill">
             <span class="dot" id="table-dot"></span>
@@ -443,16 +438,10 @@
         </div>
       </div>
       <div class="table-shell">
-        <div class="stocks-tabs">
-          <button class="stab stab-light active" onclick="switchTab('gainers',this)">Top Gainers</button>
-          <button class="stab stab-light" onclick="switchTab('losers',this)">Top Losers</button>
-          <button class="stab stab-light" onclick="switchTab('marketcap',this)">By Market Cap</button>
-        </div>
         <div class="stocks-table-scroll">
           <table class="stocks-table stocks-table-light">
             <thead>
               <tr>
-                <th>No.</th>
                 <th>Symbol</th>
                 <th>Stock Name</th>
                 <th>Latest Price</th>
@@ -461,7 +450,7 @@
               </tr>
             </thead>
             <tbody id="stocks-tbody">
-              <tr><td colspan="6">Loading market data…</td></tr>
+              <tr><td colspan="5">Loading market data…</td></tr>
             </tbody>
           </table>
         </div>
@@ -608,7 +597,7 @@
     <div class="biz-info-card">
       <h2>Business information (required for financial-service ads)</h2>
       <p><strong>Service name:</strong> USStockEdge</p>
-      <p><strong>What we offer:</strong> Optional educational summaries of publicly available US market information, delivered in a WhatsApp group.</p>
+      <p><strong>What we offer:</strong> Optional educational summaries of publicly available US market information, delivered in a WhatsApp group. No personalized investment recommendations are provided.</p>
       <p><strong>Licensing:</strong> We are not a registered investment adviser, broker-dealer, or bank. We do not provide personalized investment advice.</p>
       <p><strong>Contact:</strong> <a href="mailto:contact@usstockedge.com">contact@usstockedge.com</a> · Privacy: <a href="mailto:privacy@usstockedge.com">privacy@usstockedge.com</a></p>
       <p><strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States</p>
@@ -676,9 +665,7 @@
       'COST':'Costco Wholesale','HD':'Home Depot Inc.','WMT':'Walmart Inc.',
       'NFLX':'Netflix Inc.','AMD':'Advanced Micro Devices'
     };
-    var ANALYST_LEVELS = { support: 118.40, resistance: 134.60 };
     var cachedQuotes = {};
-    var currentTab = 'gainers';
 
     // Main: fetch from Cloudflare Worker (fast, cached, no rate limits)
     // Falls back to direct Finnhub only if Worker completely fails
@@ -721,27 +708,6 @@
     function nowET() {
       return new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: true });
     }
-
-    function calcRSI(closes, period) {
-      if (!period) period = 14;
-      if (!closes || closes.length < period + 1) return null;
-      var s = closes.slice(-(period + 1));
-      var g = 0, l = 0;
-      for (var i = 1; i < s.length; i++) {
-        var d = s[i] - s[i - 1];
-        if (d > 0) g += d; else l += Math.abs(d);
-      }
-      var ag = g / period, al = l / period;
-      return al === 0 ? 100 : Math.round(100 - 100 / (1 + ag / al));
-    }
-
-    function rsiLabel(rsi) {
-      if (rsi >= 70) return { text: 'Overbought', cls: 'red' };
-      if (rsi <= 30) return { text: 'Oversold', cls: 'green' };
-      return { text: 'Neutral', cls: '' };
-    }
-
-    // apiFetch removed — now using Yahoo Finance batch endpoint
 
     function refreshCard() {
       var dot = document.getElementById('ticker-dot');
@@ -787,25 +753,21 @@
           tile.onclick = function() { showDetail(this.getAttribute('data-sym')); };
         }
         // Update movers table
-        renderTable(currentTab);
+        renderTable();
 
-        // build top 3 movers by absolute % change
-        var ranked = [];
+        var upCount = 0, downCount = 0;
         for (var k = 0; k < DISPLAY_SYMBOLS.length; k++) {
-          ranked.push({ sym: DISPLAY_SYMBOLS[k], q: quotes[k] });
+          var qk = quotes[k];
+          if (!qk || qk.dp == null) continue;
+          if (qk.dp > 0) upCount++;
+          else if (qk.dp < 0) downCount++;
         }
-        ranked.sort(function(a, b) { return Math.abs(b.q.dp) - Math.abs(a.q.dp); });
-        var top3 = ranked.slice(0, 3);
-        var today = new Date().toLocaleDateString('en-US', { weekday:'long', month:'short', day:'numeric', timeZone:'America/New_York' });
-        var waLines = '<strong>Example public price moves — ' + today + ':</strong><br>';
-        for (var m = 0; m < top3.length; m++) {
-          var s = top3[m], up2 = s.q.dp >= 0;
-          waLines += (m+1) + '. ' + s.sym + ' — $' + fmt(s.q.c) + ' <span class="' + (up2?'up':'down') + '">' + (up2?'▲ +':'▼ ') + fmt(s.q.dp) + '%</span><br>';
-        }
-        // Populate animated line elements
-        if (top3[0]) { var s0=top3[0],u0=s0.q.dp>=0; var el0=document.getElementById('wa-l1'); if(el0) el0.innerHTML='1. '+s0.sym+' — $'+fmt(s0.q.c)+' <span class="'+(u0?'up':'down')+'">'+(u0?'▲ +':'▼ ')+fmt(s0.q.dp)+'%</span>'; }
-        if (top3[1]) { var s1=top3[1],u1=s1.q.dp>=0; var el1=document.getElementById('wa-l2'); if(el1) el1.innerHTML='2. '+s1.sym+' — $'+fmt(s1.q.c)+' <span class="'+(u1?'up':'down')+'">'+(u1?'▲ +':'▼ ')+fmt(s1.q.dp)+'%</span>'; }
-        if (top3[2]) { var s2=top3[2],u2=s2.q.dp>=0; var el2=document.getElementById('wa-l3'); if(el2) el2.innerHTML='3. '+s2.sym+' — $'+fmt(s2.q.c)+' <span class="'+(u2?'up':'down')+'">'+(u2?'▲ +':'▼ ')+fmt(s2.q.dp)+'%</span>'; }
+        var el1 = document.getElementById('wa-l1');
+        if (el1) el1.textContent = 'Of the 20 tickers we track, ' + upCount + ' closed higher and ' + downCount + ' closed lower.';
+        var el2 = document.getElementById('wa-l2');
+        if (el2) el2.innerHTML = 'Full quote table, unranked: <a href="#features" class="wa-link">see the 20 tickers on this page</a>';
+        var el3 = document.getElementById('wa-l3');
+        if (el3) el3.textContent = 'This is a count of a fixed list, not a ranking of investments.';
         document.getElementById('wa-time').textContent = nowET() + ' ET · Quotes may be delayed';
 
         var open = isMarketOpen();
@@ -832,26 +794,17 @@
       });
     }
 
-    function renderTable(tab) {
+    function renderTable() {
       var rows = DISPLAY_SYMBOLS.map(function(sym) {
         return { sym: sym, q: cachedQuotes[sym] };
-      });
-      if (tab === 'gainers') {
-        rows = rows.filter(function(r) { return r.q && r.q.dp > 0; });
-        rows.sort(function(a, b) { return b.q.dp - a.q.dp; });
-      } else if (tab === 'losers') {
-        rows = rows.filter(function(r) { return r.q && r.q.dp < 0; });
-        rows.sort(function(a, b) { return a.q.dp - b.q.dp; });
-      }
-      // marketcap = default order, no sort needed
+      }).filter(function(r) { return r.q && r.q.c > 0; });
+      rows.sort(function(a, b) { return b.q.dp - a.q.dp; });
       var html = '';
       for (var i = 0; i < rows.length; i++) {
         var sym = rows[i].sym, q = rows[i].q;
-        if (!q) continue;
         var up = q.dp >= 0;
         var chgSign = up ? '+' : '';
         html += '<tr onclick="showDetail(\'' + sym + '\')" data-sym="' + sym + '">' +
-          '<td class="td-no">' + (i+1) + '</td>' +
           '<td class="td-sym">' + sym + '</td>' +
           '<td class="td-name">' + (COMPANY_NAMES[sym] || sym) + '</td>' +
           '<td class="td-price">$' + fmt(q.c) + '</td>' +
@@ -859,15 +812,7 @@
           '<td class="' + (up?'td-up':'td-down') + '">' + (up?'+':'') + fmt(q.dp) + '%</td>' +
           '</tr>';
       }
-      document.getElementById('stocks-tbody').innerHTML = html || '<tr><td colspan="6" style="text-align:center;color:rgba(255,255,255,0.3);padding:16px;">No data</td></tr>';
-    }
-
-    function switchTab(tab, btn) {
-      currentTab = tab;
-      document.querySelectorAll('.stab').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      closeDetail();
-      renderTable(tab);
+      document.getElementById('stocks-tbody').innerHTML = html || '<tr><td colspan="5">No data</td></tr>';
     }
 
     function showDetail(sym) {
