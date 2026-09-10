@@ -185,7 +185,7 @@
         </div>\
       </div>\
       <div class="disclaimer">\
-        <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. <strong>Fees on this website: $0</strong> — no payment is collected here. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. <strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States.\
+        <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. <strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\
       <div style="max-width:1100px;margin:20px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.2);">\
         &copy; 2026 USStockEdge. All rights reserved.\
