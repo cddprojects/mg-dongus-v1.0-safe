@@ -202,7 +202,6 @@
           <ul>\
             <li><a href="privacy-policy.html">Privacy Policy</a></li>\
             <li><a href="terms-of-use.html">Terms of Use</a></li>\
-            <li><a href="index.html#business-info">Business info</a></li>\
           </ul>\
         </div>\
       </div>\
