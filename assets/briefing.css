@@ -799,6 +799,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 .stocks-table th:nth-child(5) { text-align: right; }
 .stocks-table tbody tr { border-bottom: 1px solid var(--line); cursor: pointer; }
 .stocks-table tbody tr:hover { background: rgba(246,243,234,0.04); }
+.stocks-table tbody tr.selected { background: rgba(212,160,23,0.08); }
 .stocks-table td {
   padding: 12px; color: var(--muted); white-space: nowrap;
 }
