@@ -191,14 +191,6 @@
           </ul>\
         </div>\
       </div>\
-      <div class="disclaimer policy-banner" role="note">\
-        <strong>Educational only.</strong>\
-        Not a registered investment adviser, broker-dealer, or bank.\
-        Nothing here is a recommendation to buy, sell, or hold.\
-        Investing involves risk, including possible loss of principal.\
-        Third-party quotes may be delayed.\
-        <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
-      </div>\
       <div class="disclaimer">\
         <strong>Disclaimer:</strong> Educational only — not financial, investment, or trading advice. We do not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not future results. Not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed or incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation claimed. <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
       </div>\

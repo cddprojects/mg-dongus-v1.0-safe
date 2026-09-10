@@ -200,19 +200,6 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   100% { transform: translateX(-50%); }
 }
 
-.policy-banner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding-top: 28px;
-  border-top: 1px solid rgba(214, 201, 164, 0.14);
-  color: rgba(246, 243, 234, 0.32);
-  font-size: 0.82rem;
-  line-height: 1.7;
-  text-align: left;
-  font-family: "IBM Plex Sans", sans-serif;
-}
-.policy-banner strong { color: rgba(246, 243, 234, 0.55); }
-
 /* Hero briefing desk */
 .daily-update-section,
 .brief-hero {
@@ -1241,7 +1228,6 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
   .ticker-bar { flex-wrap: wrap; padding: 6px 12px 4px; }
   .ticker-status-badge { font-size: 0.6rem; letter-spacing: 0.06em; }
   .ticker-last-update { font-size: 0.6rem; margin-left: auto; }
-  .policy-banner { font-size: 0.78rem; }
   .section-label, .why-kicker, .chip, .kicker, .flow-label, .live-badge {
     letter-spacing: 0.06em;
     font-size: 0.62rem;
