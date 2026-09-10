@@ -156,7 +156,7 @@
       </a>\
       <div class="nav-links">\
         <a href="index.html#how">Process</a>\
-        <a href="index.html#features">Quotes</a>\
+        <a href="index.html#features">Tickers</a>\
         <a href="index.html#markets">Markets</a>\
         <a href="index.html#testimonials">Use</a>\
         <a href="index.html#faq">FAQ</a>\
@@ -170,7 +170,7 @@
     </nav>\
     <div class="nav-drawer" id="navDrawer">\
       <a href="index.html#how">Process</a>\
-      <a href="index.html#features">Quotes</a>\
+      <a href="index.html#features">Tickers</a>\
       <a href="index.html#markets">Markets</a>\
       <a href="index.html#testimonials">Use</a>\
       <a href="index.html#faq">FAQ</a>\
@@ -193,7 +193,7 @@
           <h5>Quick Links</h5>\
           <ul>\
             <li><a href="index.html#how">Process</a></li>\
-            <li><a href="index.html#features">Quotes</a></li>\
+            <li><a href="index.html#features">Tickers</a></li>\
             <li><a href="index.html#faq">FAQ</a></li>\
           </ul>\
         </div>\

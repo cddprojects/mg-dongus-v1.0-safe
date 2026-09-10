@@ -310,15 +310,15 @@
         <!-- Section title — outside the card -->
         <div class="section-head fade-in">
           <span class="section-label">20 tickers</span>
-          <h2 class="section-title centered">Quotes on this page</h2>
-          <p class="section-sub centered">Third-party quotes for a fixed list of 20 tickers. Not an S&amp;P 500 ranking. Tap a tile for the fields we receive.</p>
+          <h2 class="section-title centered">Prices we show here</h2>
+          <p class="section-sub centered">Delayed third-party prices for a fixed list of 20 US companies. Not an S&amp;P 500 ranking. Tap a tile for the day's high, low, and change.</p>
         </div>
 
         <!-- Live S&P 500 Top 20 panel -->
         <div class="features-visual fade-in">
           <div class="board-toolbar">
             <div id="card-live-badge" class="live-badge delayed">
-              <span class="dot"></span> Third-party quotes
+              <span class="dot"></span> Delayed prices
             </div>
             <div class="card-refresh-note" id="card-refresh-time"></div>
           </div>
@@ -419,13 +419,13 @@
   <section class="movers">
     <div class="narrow">
       <div class="section-head">
-        <span class="section-label">Quotes</span>
+        <span class="section-label">Prices</span>
         <h2 class="section-title centered">All 20 tickers</h2>
-        <p class="section-sub centered">Complete list, both directions, sorted by today's change. Not a shortlist. Quotes may be delayed.</p>
+        <p class="section-sub centered">Complete list, both directions, sorted by today's change. Not a shortlist. Prices may be delayed.</p>
         <div class="table-meta">
           <div id="table-live-badge" class="status-pill">
             <span class="dot" id="table-dot"></span>
-            <span id="table-market-status">Quote data</span>
+            <span id="table-market-status">Price data</span>
           </div>
           <div class="time-pill">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -749,7 +749,7 @@
         var el1 = document.getElementById('wa-l1');
         if (el1) el1.textContent = upCount + ' higher, ' + downCount + ' lower among the 20 we track.';
         var el2 = document.getElementById('wa-l2');
-        if (el2) el2.innerHTML = 'Unranked table: <a href="#features" class="wa-link">see all 20 quotes</a>';
+        if (el2) el2.innerHTML = 'Unranked table: <a href="#features" class="wa-link">see all 20 prices</a>';
         var el3 = document.getElementById('wa-l3');
         if (el3) el3.textContent = 'A count of a fixed list — not a ranking.';
         document.getElementById('wa-time').textContent = nowET() + ' ET · Delayed';
@@ -757,7 +757,7 @@
         var open = isMarketOpen();
         var badge = document.getElementById('card-live-badge');
         badge.innerHTML = open
-          ? '<span class="dot"></span> Delayed quotes'
+          ? '<span class="dot"></span> Delayed prices'
           : '<span class="dot" style="background:var(--gold);animation:none"></span> Market closed';
         badge.className = 'live-badge' + (open ? '' : ' delayed');
         document.getElementById('card-refresh-time').textContent = 'Updated ' + nowET() + ' ET';
