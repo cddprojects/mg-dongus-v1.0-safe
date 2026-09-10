@@ -35,8 +35,8 @@
     .nav-links a {\
       color: rgba(246,243,234,0.58); text-decoration: none;\
       font-family: "IBM Plex Mono", ui-monospace, monospace;\
-      font-size: 0.68rem; font-weight: 600;\
-      letter-spacing: 0.1em; text-transform: uppercase;\
+      font-size: 0.7rem; font-weight: 600;\
+      letter-spacing: 0.06em; text-transform: uppercase;\
       padding: 7px 10px; border-radius: 0;\
       transition: color 0.15s, background 0.15s; white-space: nowrap;\
     }\

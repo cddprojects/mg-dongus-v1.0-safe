@@ -65,15 +65,15 @@ body::before {
   color: var(--ink);
   padding: 13px 22px;
   border-radius: 2px;
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
   text-decoration: none;
   border: 1px solid var(--wa);
   background: var(--wa);
   cursor: pointer;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   transition: transform 0.15s, box-shadow 0.2s, filter 0.15s;
   box-shadow: none;
 }
@@ -149,6 +149,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 6px 20px 4px;
   border-bottom: 1px solid var(--line);
   font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -201,9 +202,9 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   background: #1a1408;
   border-bottom: 1px solid rgba(212, 160, 23, 0.35);
   color: #e6d3a1;
-  font-size: 0.78rem;
-  line-height: 1.65;
-  padding: 12px 5%;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  padding: 8px 5%;
   text-align: left;
   font-family: "IBM Plex Sans", sans-serif;
   position: relative;
@@ -218,7 +219,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
     linear-gradient(180deg, rgba(7,11,16,0.2), rgba(7,11,16,0.85)),
     radial-gradient(circle at 80% 10%, rgba(61,207,138,0.08), transparent 28%),
     var(--ink) !important;
-  padding: 72px 5% 88px !important;
+  padding: 40px 5% 56px !important;
   overflow: hidden;
 }
 .daily-update-inner,
@@ -230,7 +231,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   gap: 56px;
   align-items: center;
 }
-.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .chip {
   display: inline-flex;
   align-items: center;
@@ -250,29 +251,30 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 .brief-hero h2,
 .daily-update-section h2 {
   font-family: "Newsreader", "Merriweather", serif !important;
-  font-size: clamp(2.05rem, 4.2vw, 3.35rem);
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
   font-weight: 500 !important;
   letter-spacing: -0.03em;
   line-height: 1.12;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--paper) !important;
 }
 .brief-hero .section-sub,
 .daily-update-section .section-sub {
   text-align: left;
   margin-left: 0;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   max-width: 540px;
+  font-size: 0.95rem;
 }
-.btn-hero { margin-top: 32px; }
+.btn-hero { margin-top: 22px; }
 .brief-hero h2 span,
 .daily-update-section h2 span { color: var(--gold) !important; }
 .stat-chip {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin: 0 0 24px;
-  padding: 14px 16px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
   border: 1px solid var(--line);
   background: var(--panel);
 }
@@ -1231,7 +1233,11 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
   .stocks-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid { grid-template-columns: 1fr; }
   .ticker-item { padding: 0 16px; font-size: 0.76rem; }
-  .policy-banner { font-size: 0.74rem; }
+  .ticker-bar { flex-wrap: wrap; padding: 6px 12px 4px; }
+  .ticker-status-badge { font-size: 0.6rem; letter-spacing: 0.08em; }
+  .ticker-last-update { font-size: 0.6rem; margin-left: auto; }
+  .policy-banner { font-size: 0.7rem; padding: 8px 4%; }
+  .daily-update-section, .brief-hero { padding: 28px 4% 40px !important; }
   .page-hero { padding: 100px 4% 40px; }
   .policy-wrap { padding: 40px 4% 72px; }
   .ty-wrap { padding: 96px 4% 56px; }
