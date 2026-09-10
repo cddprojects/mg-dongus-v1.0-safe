@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/briefing.css?v=20260910-5" />
+  <link rel="stylesheet" href="assets/briefing.css?v=20260910-7" />
 
   <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
   <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
@@ -29,7 +29,7 @@
     <div class="ticker-bar">
       <div class="ticker-status-badge">
         <span class="live-dot" id="ticker-dot"></span>
-        <span id="ticker-status-text">Loading market data…</span>
+        <span id="ticker-status-text">Loading…</span>
       </div>
       <span class="ticker-last-update" id="ticker-update-time"></span>
     </div>
@@ -90,11 +90,11 @@
         <div class="chip-row">
           <div class="chip live">
             <span class="live-dot"></span>
-            Pre-market public data
+            Pre-market
           </div>
           <div class="chip">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            Weekday mornings
+            Weekdays
           </div>
         </div>
 
@@ -142,7 +142,7 @@
             </div>
             <div>
               <div class="wa-title">US StockEdge · Daily Update</div>
-              <div class="wa-sub" id="wa-time">Illustrative example · Quotes may be delayed</div>
+              <div class="wa-sub" id="wa-time">Example · Delayed quotes</div>
             </div>
           </div>
           <!-- Time label -->
@@ -176,7 +176,7 @@
       <div class="section-head fade-in">
         <div class="why-kicker">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          Public data · Educational recap
+          Public data
         </div>
         <h2 class="section-title centered">What this briefing is — and is not</h2>
         <p class="section-sub centered">We summarize <strong>publicly available market data</strong> so you can do your own research. We do <strong>not</strong> provide personalized investment advice, stock picks, or guaranteed outcomes.</p>
@@ -265,7 +265,7 @@
   <!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
   <section class="how" id="how">
     <div class="section-head fade-in">
-      <span class="section-label">Simple Process</span>
+      <span class="section-label">Process</span>
       <h2 class="section-title centered">How It Works</h2>
       <p class="section-sub centered">Joining the WhatsApp group is optional. You can leave at any time. Nothing here is a trade instruction.</p>
     </div>
@@ -312,7 +312,7 @@
 
         <!-- Section title — outside the card -->
         <div class="section-head fade-in">
-          <span class="section-label">Illustrative set of 20 large US-listed companies</span>
+          <span class="section-label">20 tickers</span>
           <h2 class="section-title centered">US Market Quotes on This Page</h2>
           <p class="section-sub centered">Third-party quotes for a fixed list of 20 well-known tickers. This is not a live ranking of the S&amp;P 500. Click a tile for the quote fields we receive.</p>
         </div>
@@ -384,7 +384,7 @@
   <section id="what-you-receive">
     <div class="narrow">
       <div class="section-head fade-in">
-        <span class="section-label">What You Receive</span>
+        <span class="section-label">Included</span>
         <h2 class="section-title centered">What the WhatsApp briefing may include</h2>
         <p class="section-sub centered">These are educational summaries of public information. They are not personalized research and they are not a complete market picture.</p>
       </div>
@@ -423,7 +423,7 @@
   <section class="movers">
     <div class="narrow">
       <div class="section-head">
-        <span class="section-label">Quote table</span>
+        <span class="section-label">Quotes</span>
         <h2 class="section-title centered">All 20 tickers we track</h2>
         <p class="section-sub centered">This shows all 20 tickers we track, sorted by today's price change, in both directions. It is a complete list, not a shortlist of recommendations — nothing here was selected or ranked by preference. Quotes refresh periodically and may be delayed.</p>
         <div class="table-meta">
@@ -511,7 +511,7 @@
   <!-- ─── TESTIMONIALS ─────────────────────────────────────── -->
   <section class="testimonials" id="testimonials">
     <div class="section-head fade-in">
-      <span class="section-label">How to use this</span>
+      <span class="section-label">Use</span>
       <h2 class="section-title centered">Typical ways people use the briefing</h2>
       <p class="section-sub centered">These are use cases, not reviews and not typical results. We do not claim any investment outcome.</p>
     </div>
@@ -728,7 +728,7 @@
         }
         document.getElementById('ticker-track').innerHTML = tickerItems + tickerItems;
         dot.className = 'live-dot' + (open ? '' : ' closed');
-        statusEl.textContent = open ? 'Market hours · Third-party quotes (may be delayed)' : 'Market closed · Last available session quotes';
+        statusEl.textContent = open ? 'Market hours · Delayed quotes' : 'Market closed · Last session';
         document.getElementById('ticker-update-time').textContent = 'Updated ' + et + ' ET';
 
         // Cache quotes (using display symbols as keys)
@@ -768,13 +768,13 @@
         if (el2) el2.innerHTML = 'Full quote table, unranked: <a href="#features" class="wa-link">see the 20 tickers on this page</a>';
         var el3 = document.getElementById('wa-l3');
         if (el3) el3.textContent = 'This is a count of a fixed list, not a ranking of investments.';
-        document.getElementById('wa-time').textContent = nowET() + ' ET · Quotes may be delayed';
+        document.getElementById('wa-time').textContent = nowET() + ' ET · Delayed';
 
         var open = isMarketOpen();
         var badge = document.getElementById('card-live-badge');
         badge.innerHTML = open
-          ? '<span class="dot"></span> Third-party quotes (may be delayed)'
-          : '<span class="dot" style="background:var(--gold);animation:none"></span> Market closed · Last available quotes';
+          ? '<span class="dot"></span> Delayed quotes'
+          : '<span class="dot" style="background:var(--gold);animation:none"></span> Market closed';
         badge.className = 'live-badge' + (open ? '' : ' delayed');
         document.getElementById('card-refresh-time').textContent = 'Updated ' + nowET() + ' ET';
 
