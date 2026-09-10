@@ -247,6 +247,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   border-radius: 2px;
   color: var(--cream);
   background: rgba(12,18,24,0.7);
+  white-space: nowrap;
 }
 .chip.live { color: var(--tick); border-color: rgba(61,207,138,0.35); }
 .brief-hero h2,
@@ -457,6 +458,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
   border: 1px solid rgba(122, 91, 18, 0.3);
   padding: 5px 10px;
   margin-bottom: 18px;
+  white-space: nowrap;
 }
 .section-head { text-align: center; margin-bottom: 48px; }
 .why-wrap { max-width: 1180px; margin: 0 auto; }
