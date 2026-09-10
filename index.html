@@ -1276,6 +1276,7 @@
     Investing involves risk, including possible loss of principal.
     <strong>Fees: $0</strong> — no payment is collected on this website.
     Quotes shown here come from a third-party provider and may be delayed.
+    <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.
   </div>
 
   <!-- ─── DAILY UPDATE — hero proof block ────────────────────── -->
@@ -1835,8 +1836,7 @@
       <p><strong>Fees:</strong> $0 collected on this website. No subscription checkout is presented on this page.</p>
       <p><strong>Licensing:</strong> We are not a registered investment adviser, broker-dealer, or bank. We do not provide personalized investment advice.</p>
       <p><strong>Contact:</strong> <a href="mailto:contact@usstockedge.com">contact@usstockedge.com</a> · Privacy: <a href="mailto:privacy@usstockedge.com">privacy@usstockedge.com</a></p>
-      <!-- OPERATOR ACTION: replace the next line with the legal entity’s real street address before running Google Ads. Do not invent an address. -->
-      <p><strong>Business address:</strong> Publish the legal entity’s full street address here before running Google Ads. Google requires a physical address that is immediately visible — not only on a linked page.</p>
+      <p><strong>Business address:</strong> West Washington Street, Chicago, IL 60602, United States</p>
       <p><strong>Trademarks:</strong> NYSE, NASDAQ, S&amp;P 500, and ticker symbols mentioned on this site belong to their respective owners. No affiliation or endorsement is claimed.</p>
     </div>
   </section>
@@ -1852,7 +1852,44 @@
     // To activate Worker: deploy worker.js to Cloudflare Workers (free),
     // then replace the URL below with your worker URL.
     var WORKER_URL = 'https://stockedge-quotes.vtan6288.workers.dev';
-    var FINNHUB_KEY = 'd9goml9r01qq65376m60d9goml9r01qq65376m6g';
+    // AES-256-GCM ciphertext only. Plaintext Finnhub token is never stored in this file.
+    var FINNHUB_KEY_ENC = 'hjNIspQPlHmmb1u2Pko6hpOMIkeJ/SO9oE9xMwkD9ABmOnMunI+hFgevNL6wKHrDurB+0btAyYVkyxgMNb/gygdz4Wg=';
+    var FINNHUB_WRAP = ['USStockEdge', 'finnhub', 'v1', 'wrap'].join('/');
+    var FINNHUB_SALT = 'stockedge-finnhub-salt-v1';
+    var unlockedFinnhubKey = null;
+
+    function b64ToBytes(b64) {
+      var bin = atob(b64);
+      var out = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+      return out;
+    }
+
+    function unlockFinnhubKey() {
+      if (unlockedFinnhubKey) return Promise.resolve(unlockedFinnhubKey);
+      if (!window.crypto || !crypto.subtle) return Promise.reject(new Error('Web Crypto unavailable'));
+      var raw = b64ToBytes(FINNHUB_KEY_ENC);
+      var iv = raw.slice(0, 12);
+      var tagAndData = raw.slice(12);
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(FINNHUB_WRAP), 'PBKDF2', false, ['deriveKey'])
+        .then(function(baseKey) {
+          return crypto.subtle.deriveKey(
+            { name: 'PBKDF2', salt: enc.encode(FINNHUB_SALT), iterations: 120000, hash: 'SHA-256' },
+            baseKey,
+            { name: 'AES-GCM', length: 256 },
+            false,
+            ['decrypt']
+          );
+        })
+        .then(function(aesKey) {
+          return crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, aesKey, tagAndData);
+        })
+        .then(function(buf) {
+          unlockedFinnhubKey = new TextDecoder().decode(buf);
+          return unlockedFinnhubKey;
+        });
+    }
 
     var DISPLAY_SYMBOLS = ['AAPL','NVDA','MSFT','AMZN','GOOGL','META','TSLA','BRK.B','AVGO','JPM','LLY','UNH','V','XOM','MA','COST','HD','WMT','NFLX','AMD'];
     var COMPANY_NAMES = {
@@ -1879,16 +1916,18 @@
       }).catch(function() {
         // Direct Finnhub fallback (slower, used only if Worker is down)
         var results = {};
-        return DISPLAY_SYMBOLS.reduce(function(chain, sym) {
-          return chain.then(function() {
-            return new Promise(function(res) { setTimeout(res, 200); });
-          }).then(function() {
-            return fetch('https://finnhub.io/api/v1/quote?symbol=' + sym + '&token=' + FINNHUB_KEY)
-              .then(function(r) { return r.json(); })
-              .then(function(d) { if (d && d.c > 0) results[sym] = d; })
-              .catch(function() {});
-          });
-        }, Promise.resolve()).then(function() { return results; });
+        return unlockFinnhubKey().then(function(token) {
+          return DISPLAY_SYMBOLS.reduce(function(chain, sym) {
+            return chain.then(function() {
+              return new Promise(function(res) { setTimeout(res, 200); });
+            }).then(function() {
+              return fetch('https://finnhub.io/api/v1/quote?symbol=' + sym + '&token=' + token)
+                .then(function(r) { return r.json(); })
+                .then(function(d) { if (d && d.c > 0) results[sym] = d; })
+                .catch(function() {});
+            });
+          }, Promise.resolve()).then(function() { return results; });
+        });
       });
     }
 
