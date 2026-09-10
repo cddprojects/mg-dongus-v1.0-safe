@@ -968,26 +968,6 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 }
 .faq-item.open .faq-a { max-height: 320px; padding: 0 0 20px; }
 
-.biz-info { max-width: 1180px; margin: 0 auto; padding: 24px 5% 64px; }
-.biz-info-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 0;
-  padding: 24px 26px;
-  font-size: 0.86rem;
-  color: var(--muted);
-}
-.biz-info-card h2 {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 14px;
-}
-.biz-info-card p { margin-bottom: 8px; }
-.biz-info-card a { color: var(--cream); }
-
 /* Legal / thank-you */
 body.legal-page {
   background: var(--paper);

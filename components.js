@@ -100,7 +100,7 @@
     .footer-inner {\
       max-width: 1180px; margin: 0 auto;\
       display: grid; grid-template-columns: 1.6fr 1fr 1fr;\
-      gap: 48px; margin-bottom: 40px;\
+      gap: 48px; margin-bottom: 0;\
     }\
     .footer-brand .nav-logo { margin-bottom: 14px; }\
     .footer-brand p { color: rgba(246,243,234,0.42); line-height: 1.65; font-size: 0.82rem; }\
@@ -113,6 +113,20 @@
     .footer-links a, .footer-links button { color: rgba(246,243,234,0.42); text-decoration: none; }\
     .footer-links button { padding: 0; border: 0; background: none; font: inherit; cursor: pointer; }\
     .footer-links a:hover { color: #f6f3ea; }\
+    .footer-biz {\
+      max-width: 1180px; margin: 0 auto;\
+      padding: 28px 0 0; margin-top: 36px;\
+      border-top: 1px solid rgba(214,201,164,0.14);\
+      font-size: 0.78rem; line-height: 1.65;\
+      color: rgba(246,243,234,0.38);\
+    }\
+    .footer-biz h5 {\
+      color: #d6c9a4; font-size: 0.68rem; font-weight: 600;\
+      font-family: "IBM Plex Mono", ui-monospace, monospace;\
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;\
+    }\
+    .footer-biz p { margin: 0 0 6px; }\
+    .footer-biz a { color: rgba(246,243,234,0.55); }\
     .disclaimer {\
       max-width: 1180px; margin: 0 auto;\
       padding-top: 28px; border-top: 1px solid rgba(214,201,164,0.14);\
@@ -188,8 +202,18 @@
           <ul>\
             <li><a href="privacy-policy.html">Privacy Policy</a></li>\
             <li><a href="terms-of-use.html">Terms of Use</a></li>\
+            <li><a href="index.html#business-info">Business info</a></li>\
           </ul>\
         </div>\
+      </div>\
+      <div class="footer-biz" id="business-info">\
+        <h5>Business information</h5>\
+        <p><strong>Service:</strong> USStockEdge</p>\
+        <p><strong>What we offer:</strong> Optional educational recaps of public US market data in WhatsApp. No personalized recommendations.</p>\
+        <p><strong>Licensing:</strong> Not a registered investment adviser, broker-dealer, or bank. No personalized advice.</p>\
+        <p><strong>Contact:</strong> <a href="mailto:contact@usstockedge.com">contact@usstockedge.com</a> · Privacy: <a href="mailto:privacy@usstockedge.com">privacy@usstockedge.com</a></p>\
+        <p><strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States</p>\
+        <p><strong>Trademarks:</strong> NYSE, NASDAQ, S&amp;P 500, and tickers named here belong to their owners. No affiliation claimed.</p>\
       </div>\
       <div class="disclaimer">\
         <strong>Disclaimer:</strong> Educational only — not financial, investment, or trading advice. We do not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not future results. Not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed or incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation claimed. <strong>Address:</strong> West Washington Street, Chicago, IL 60602, United States.\
