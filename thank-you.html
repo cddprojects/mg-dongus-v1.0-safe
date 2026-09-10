@@ -215,7 +215,7 @@
       <h1 class="ty-headline" id="ty-headline">You're in!</h1>
 
       <p class="ty-sub">
-        Your sign-up is confirmed. Your first morning briefing arrives before <strong style="color:rgba(255,255,255,0.85);">9 AM ET</strong> on the next trading day — delivered directly to your WhatsApp.
+        If you opened the WhatsApp invite, look for the group message. When a briefing is sent, it is usually before <strong style="color:rgba(255,255,255,0.85);">9 AM ET</strong> on a US trading day. Delivery can be late or skipped. This is educational information, not advice.
       </p>
 
       <div class="ty-steps">
@@ -230,22 +230,22 @@
         <div class="ty-step">
           <div class="step-num">2</div>
           <div class="step-text">
-            <strong>Look out for your morning briefing</strong>
-            <span>Before 9 AM ET on every trading day, our analyst shares 2–3 US stock profiles with full technical analysis.</span>
+            <strong>Look out for the educational recap</strong>
+            <span>When a briefing is sent, it is usually before 9 AM ET on a US trading day and may mention 2–3 tickers using public data. That is not a recommendation list.</span>
           </div>
         </div>
         <div class="ty-step">
           <div class="step-num">3</div>
           <div class="step-text">
-            <strong>Ask questions &amp; follow along</strong>
-            <span>Use the analysis as a starting point for your own research. Ask questions in the group — our analyst is there to help.</span>
+            <strong>Do your own research</strong>
+            <span>Use any recap only as one source among many. Other members’ comments are not our advice. Consider a licensed advisor if you need personal guidance.</span>
           </div>
         </div>
       </div>
 
       <div class="ty-pills">
-        <span class="ty-pill"><span class="check">✓</span> Always free</span>
-        <span class="ty-pill"><span class="check">✓</span> No subscription</span>
+        <span class="ty-pill"><span class="check">✓</span> No payment on this site</span>
+        <span class="ty-pill"><span class="check">✓</span> Not financial advice</span>
         <span class="ty-pill"><span class="check">✓</span> Leave anytime</span>
       </div>
 
@@ -264,7 +264,10 @@
       var name = params.get('name');
       if (name) {
         var el = document.getElementById('ty-headline');
-        if (el) el.innerHTML = 'You\'re in, <span class="name">' + name.split(' ')[0] + '!</span>';
+        if (el) {
+          var safe = name.split(' ')[0].replace(/[<>&]/g, '');
+          el.textContent = 'You\'re in, ' + safe + '!';
+        }
       }
     }());
   </script>

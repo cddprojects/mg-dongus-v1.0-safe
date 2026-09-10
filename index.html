@@ -5,8 +5,8 @@
   <link rel="icon" type="image/x-icon" href="logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  
-  <title>USStockEdge — Free Daily US Stock Market Analysis &amp; Research</title>
-  <meta name="description" content="Join thousands of US investors receiving free daily stock market analysis, technical data summaries, and stocks worth researching — delivered directly on WhatsApp. No fees, no commitments." />
+  <title>USStockEdge — Educational US Market Data Briefing</title>
+  <meta name="description" content="Free educational summaries of publicly available US market data, delivered in a WhatsApp group. Not financial advice. Not a registered investment advisor. No payment is collected on this page." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1168,6 +1168,40 @@
       transform: translateY(0);
     }
     .ctc-popup { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+
+    .policy-banner {
+      background: #fffbeb;
+      border-bottom: 1px solid #f59e0b;
+      color: #78350f;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      padding: 14px 5%;
+      text-align: center;
+    }
+    .policy-banner strong { color: #451a03; }
+    .biz-info {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 5% 8px;
+    }
+    .biz-info-card {
+      background: var(--gray50);
+      border: 1px solid var(--gray200);
+      border-radius: 14px;
+      padding: 24px 28px;
+      font-size: 0.88rem;
+      color: var(--gray700);
+      line-height: 1.7;
+    }
+    .biz-info-card h2 {
+      font-size: 0.78rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 12px;
+    }
+    .biz-info-card p { margin-bottom: 8px; }
+    .biz-info-card p:last-child { margin-bottom: 0; }
   </style>
   <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
   <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
@@ -1190,50 +1224,58 @@
     </div>
     <div class="ticker-scroll">
       <div class="ticker-track" id="ticker-track">
-        <!-- static fallback — replaced by live data once API key is set -->
-        <span class="ticker-item">AAPL <span class="up">▲ +1.24%</span></span>
-        <span class="ticker-item">NVDA <span class="up">▲ +2.87%</span></span>
-        <span class="ticker-item">MSFT <span class="up">▲ +0.91%</span></span>
-        <span class="ticker-item">AMZN <span class="up">▲ +1.55%</span></span>
-        <span class="ticker-item">GOOGL <span class="up">▲ +0.78%</span></span>
-        <span class="ticker-item">META <span class="up">▲ +3.12%</span></span>
-        <span class="ticker-item">TSLA <span class="down">▼ −0.63%</span></span>
-        <span class="ticker-item">BRK.B <span class="up">▲ +0.42%</span></span>
-        <span class="ticker-item">AVGO <span class="up">▲ +1.18%</span></span>
-        <span class="ticker-item">JPM <span class="down">▼ −0.22%</span></span>
-        <span class="ticker-item">LLY <span class="up">▲ +0.67%</span></span>
-        <span class="ticker-item">UNH <span class="down">▼ −0.35%</span></span>
-        <span class="ticker-item">V <span class="up">▲ +0.53%</span></span>
-        <span class="ticker-item">XOM <span class="up">▲ +0.81%</span></span>
-        <span class="ticker-item">MA <span class="up">▲ +0.61%</span></span>
-        <span class="ticker-item">COST <span class="up">▲ +0.44%</span></span>
-        <span class="ticker-item">HD <span class="down">▼ −0.18%</span></span>
-        <span class="ticker-item">WMT <span class="up">▲ +0.29%</span></span>
-        <span class="ticker-item">NFLX <span class="up">▲ +1.93%</span></span>
-        <span class="ticker-item">AMD <span class="up">▲ +1.73%</span></span>
-        <!-- duplicate for seamless loop -->
-        <span class="ticker-item">AAPL <span class="up">▲ +1.24%</span></span>
-        <span class="ticker-item">NVDA <span class="up">▲ +2.87%</span></span>
-        <span class="ticker-item">MSFT <span class="up">▲ +0.91%</span></span>
-        <span class="ticker-item">AMZN <span class="up">▲ +1.55%</span></span>
-        <span class="ticker-item">GOOGL <span class="up">▲ +0.78%</span></span>
-        <span class="ticker-item">META <span class="up">▲ +3.12%</span></span>
-        <span class="ticker-item">TSLA <span class="down">▼ −0.63%</span></span>
-        <span class="ticker-item">BRK.B <span class="up">▲ +0.42%</span></span>
-        <span class="ticker-item">AVGO <span class="up">▲ +1.18%</span></span>
-        <span class="ticker-item">JPM <span class="down">▼ −0.22%</span></span>
-        <span class="ticker-item">LLY <span class="up">▲ +0.67%</span></span>
-        <span class="ticker-item">UNH <span class="down">▼ −0.35%</span></span>
-        <span class="ticker-item">V <span class="up">▲ +0.53%</span></span>
-        <span class="ticker-item">XOM <span class="up">▲ +0.81%</span></span>
-        <span class="ticker-item">MA <span class="up">▲ +0.61%</span></span>
-        <span class="ticker-item">COST <span class="up">▲ +0.44%</span></span>
-        <span class="ticker-item">HD <span class="down">▼ −0.18%</span></span>
-        <span class="ticker-item">WMT <span class="up">▲ +0.29%</span></span>
-        <span class="ticker-item">NFLX <span class="up">▲ +1.93%</span></span>
-        <span class="ticker-item">AMD <span class="up">▲ +1.73%</span></span>
+        <!-- Neutral fallback — no invented percentages while quotes load -->
+        <span class="ticker-item">AAPL <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">NVDA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">MSFT <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AMZN <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">GOOGL <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">META <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">TSLA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">BRK.B <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AVGO <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">JPM <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">LLY <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">UNH <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">V <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">XOM <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">MA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">COST <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">HD <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">WMT <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">NFLX <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AMD <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AAPL <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">NVDA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">MSFT <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AMZN <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">GOOGL <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">META <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">TSLA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">BRK.B <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AVGO <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">JPM <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">LLY <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">UNH <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">V <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">XOM <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">MA <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">COST <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">HD <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">WMT <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">NFLX <span class="t-price">Loading quote…</span></span>
+        <span class="ticker-item">AMD <span class="t-price">Loading quote…</span></span>
       </div>
     </div>
+  </div>
+
+  <div class="policy-banner" role="note">
+    <strong>Educational information only.</strong>
+    USStockEdge is not a registered investment adviser, broker-dealer, or bank.
+    Nothing on this page is a recommendation to buy, sell, or hold any security.
+    Investing involves risk, including possible loss of principal.
+    <strong>Fees: $0</strong> — no payment is collected on this website.
+    Quotes shown here come from a third-party provider and may be delayed.
   </div>
 
   <!-- ─── DAILY UPDATE — hero proof block ────────────────────── -->
@@ -1251,12 +1293,12 @@
           </div>
           <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);color:#a5b4fc;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:100px;">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            AI-Screened Analysis
+            Public-Data Briefing
           </div>
         </div>
 
-        <h2 style="font-family:'Merriweather',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:18px;">Start Your Morning With Free Market Analysis<br><span style="color:var(--gold);">Before the US Market Opens</span></h2>
-        <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:32px;">Every morning before 9 AM ET, our AI screens thousands of data points across NYSE &amp; NASDAQ — and delivers a curated market data briefing directly to your WhatsApp. Free, always.</p>
+        <h2 style="font-family:'Merriweather',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:18px;">Start Your Morning With an Educational Market Briefing<br><span style="color:var(--gold);">Before the US Market Opens</span></h2>
+        <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:32px;">On most US trading mornings before 9 AM ET, we summarize publicly available NYSE and NASDAQ price, volume, and sector data and share that recap in a WhatsApp group. No payment is collected on this page. This is educational information, not personalized advice.</p>
 
         <!-- AI stat mini card -->
         <div style="background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px;margin-bottom:24px;">
@@ -1264,32 +1306,32 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
           </div>
           <div>
-            <div style="font-size:0.78rem;font-weight:700;color:#a5b4fc;margin-bottom:2px;">AI screens <strong style="color:#fff;">10,000+ data points</strong> every morning</div>
-            <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);">NYSE · NASDAQ · Volume · Sector data · Macro context</div>
+            <div style="font-size:0.78rem;font-weight:700;color:#a5b4fc;margin-bottom:2px;">We review <strong style="color:#fff;">public price, volume, and sector data</strong> each trading morning</div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);">NYSE · NASDAQ listings · Third-party quotes · Public macro headlines</div>
           </div>
         </div>
 
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
             <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
-            Real live prices from US markets
+            Third-party quotes for selected US-listed tickers (may be delayed)
           </div>
           <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
             <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
-            AI-screened — fresh market data every trading day
+            Educational recap of public data on most trading days
           </div>
           <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
             <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
-            Instant WhatsApp delivery — no spam filters
+            Optional WhatsApp group you can leave at any time
           </div>
           <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.9rem;">
             <span style="width:22px;height:22px;background:rgba(74,222,128,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#4ade80;font-size:0.7rem;flex-shrink:0;">✓</span>
-            Completely free — no subscription ever
+            No payment collected on this website
           </div>
         </div>
         <a class="btn-primary" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer" style="margin-top:32px;display:inline-flex;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.524 5.845L0 24l6.347-1.524A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.505-5.23-1.384l-.374-.222-3.878.931.931-3.791-.245-.389A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Get Today's Free Market Briefing
+          Open the WhatsApp group invite
         </a>
       </div>
 
@@ -1303,7 +1345,7 @@
             </div>
             <div>
               <div style="font-size:0.9rem;font-weight:700;color:#fff;">US StockEdge · Daily Update</div>
-              <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="wa-time">9:00 AM ET · Live data</div>
+              <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="wa-time">Illustrative example · Quotes may be delayed</div>
             </div>
           </div>
           <!-- Time label -->
@@ -1316,15 +1358,15 @@
           </div>
           <!-- Message bubble revealed line by line -->
           <div id="wa-bubble" style="background:#1f2c34;border-radius:12px 12px 12px 2px;padding:14px 16px;font-size:0.85rem;line-height:1.85;color:rgba(255,255,255,0.88);display:none;">
-            <div class="wa-line" id="wa-l0" style="font-weight:700;color:var(--gold);margin-bottom:6px;">Top movers today:</div>
+            <div class="wa-line" id="wa-l0" style="font-weight:700;color:var(--gold);margin-bottom:6px;">Example of public price moves:</div>
             <div class="wa-line" id="wa-l1" style="margin-bottom:2px;"></div>
             <div class="wa-line" id="wa-l2" style="margin-bottom:2px;"></div>
             <div class="wa-line" id="wa-l3" style="margin-bottom:0;"></div>
-            <div class="wa-line" id="wa-l4" style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:8px;border-top:1px solid rgba(255,255,255,0.07);padding-top:8px;">Tap any stock above for full details.</div>
+            <div class="wa-line" id="wa-l4" style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:8px;border-top:1px solid rgba(255,255,255,0.07);padding-top:8px;">Educational example only. Not a buy or sell recommendation.</div>
           </div>
           <div class="delivered-tick" id="wa-tick" style="text-align:right;font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:6px;">✓✓ Delivered</div>
         </div>
-        <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-align:center;font-style:italic;">* Live data · Updates every 90 seconds · Educational purposes only</p>
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-align:center;font-style:italic;">* Illustrative WhatsApp layout. Quotes come from a third-party provider and may be delayed. Educational use only.</p>
       </div>
     </div>
   </section>
@@ -1337,10 +1379,10 @@
       <div style="text-align:center; margin-bottom:64px;" class="fade-in">
         <div style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(26,86,219,0.12),rgba(99,102,241,0.12));border:1px solid rgba(26,86,219,0.2);color:var(--blue2);font-size:0.72rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px;">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          AI-Screened · Multi-Source Data
+          Public data · Educational recap
         </div>
-        <h2 class="section-title centered" style="max-width:700px;">Why Thousands of US Investors Choose Us</h2>
-        <p class="section-sub centered">We combine <strong>multiple live data sources</strong> with <strong>AI-driven analysis</strong> to identify stocks worth researching — before the market opens.</p>
+        <h2 class="section-title centered" style="max-width:700px;">What this briefing is — and is not</h2>
+        <p class="section-sub centered">We summarize <strong>publicly available market data</strong> so you can do your own research. We do <strong>not</strong> provide personalized investment advice, stock picks, or guaranteed outcomes.</p>
       </div>
 
       <!-- Three pillars -->
@@ -1354,16 +1396,16 @@
           </div>
           <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">Diversify</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:var(--gray900);margin-bottom:12px;">Multiple Data Sources</h3>
-          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">We don't rely on a single data feed. Our system cross-references NYSE, NASDAQ, volume data, and macroeconomic signals from multiple providers simultaneously.</p>
+          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">On-page quotes come from a third-party market-data provider. Briefings discuss publicly listed NYSE and NASDAQ tickers plus publicly reported volume and macro headlines. Data can be delayed or incomplete.</p>
           <div style="display:flex;flex-direction:column;gap:8px;">
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Real-time market feeds
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Third-party quotes (may be delayed)
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Economic calendar integration
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Public economic-calendar headlines
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Cross-sector correlation
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue2);flex-shrink:0;"></span> Sector context from public reports
             </div>
           </div>
         </div>
@@ -1375,17 +1417,17 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
           </div>
           <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a5b4fc;margin-bottom:8px;">Analyse</div>
-          <h3 style="font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:12px;">AI-Driven Analysis</h3>
-          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">Our AI engine processes thousands of data points each morning — RSI, moving averages, volume patterns, and sector momentum — to identify stocks worth watching.</p>
+          <h3 style="font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:12px;">Educational Data Recap</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">Briefings may mention commonly published technical figures such as moving averages, RSI, or volume — only as public-data context. These figures are not signals to trade and are not personalized to you.</p>
           <div style="display:flex;flex-direction:column;gap:8px;">
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Technical pattern recognition
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Public technical figures, when cited
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Sentiment + volume analysis
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Reported volume and price changes
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.55);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> Multi-timeframe screening
+              <span style="width:6px;height:6px;border-radius:50%;background:#a5b4fc;flex-shrink:0;"></span> No guaranteed outcomes
             </div>
           </div>
         </div>
@@ -1398,16 +1440,16 @@
           </div>
           <div style="font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0d9488;margin-bottom:8px;">Track</div>
           <h3 style="font-size:1.2rem;font-weight:800;color:var(--gray900);margin-bottom:12px;">Sector Context</h3>
-          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">By tracking sector movements, price patterns, and macro context, our system identifies stocks drawing analyst attention for your own research.</p>
+          <p style="font-size:0.88rem;color:var(--gray500);line-height:1.7;margin-bottom:20px;">We may note sector moves and public macro headlines so you can place a ticker in context. Mention of a ticker is not a recommendation and does not mean it is a good investment.</p>
           <div style="display:flex;flex-direction:column;gap:8px;">
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Price pattern identification
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Public price-change context
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Sector movement tracking
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Sector headlines from public sources
             </div>
             <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray600);">
-              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Macro &amp; economic context
+              <span style="width:6px;height:6px;border-radius:50%;background:#0d9488;flex-shrink:0;"></span> Macro calendar items already in the news
             </div>
           </div>
         </div>
@@ -1423,14 +1465,14 @@
         <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
         <div style="text-align:center;flex:1;min-width:100px;">
           <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">AI Processing</div>
-          <div style="font-size:1.3rem;font-weight:800;color:#6366f1;">10,000+</div>
-          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Data points scanned daily</div>
+          <div style="font-size:1.3rem;font-weight:800;color:#6366f1;">Public data</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Reviewed for an educational recap</div>
         </div>
         <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
         <div style="text-align:center;flex:1;min-width:100px;">
           <div style="font-size:0.68rem;color:var(--gray400);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px;">Output</div>
-          <div style="font-size:1.3rem;font-weight:800;color:var(--navy);">2–3 Stocks</div>
-          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Curated daily analysis</div>
+          <div style="font-size:1.3rem;font-weight:800;color:var(--navy);">2–3 tickers</div>
+          <div style="font-size:0.75rem;color:var(--gray400);margin-top:2px;">Educational summaries, not picks</div>
         </div>
         <div style="color:var(--gray300);font-size:1.5rem;font-weight:300;">→</div>
         <div style="text-align:center;flex:1;min-width:100px;">
@@ -1449,7 +1491,7 @@
     <div style="text-align:center; margin-bottom: 56px;" class="fade-in">
       <span class="section-label">Simple Process</span>
       <h2 class="section-title centered">How It Works</h2>
-      <p class="section-sub centered">From joining to receiving daily insights — it takes less than 60 seconds to get started.</p>
+      <p class="section-sub centered">Joining the WhatsApp group is optional. You can leave at any time. Nothing here is a trade instruction.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card fade-in">
@@ -1457,32 +1499,32 @@
         <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         </div>
-        <h3>Join the Free Group</h3>
-        <p>Click any "Join" button on this page to enter our private WhatsApp group. No credit card, no signup form — just your phone.</p>
+        <h3>Open the WhatsApp invite</h3>
+        <p>Use a WhatsApp button on this page to request the group invite. WhatsApp is operated by Meta. No payment is collected here. Your phone number is handled under our Privacy Policy.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">2</div>
         <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
-        <h3>We Screen the Market</h3>
-        <p>Every morning before market open, our team runs technical scans across NYSE and NASDAQ to identify stocks with notable price and volume activity.</p>
+        <h3>We review public market data</h3>
+        <p>On most US trading mornings, we look at publicly available NYSE and NASDAQ quotes and reported volume so the briefing can describe what already happened in the data.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">3</div>
         <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3>Receive Daily Analysis</h3>
-        <p>By 9 AM ET you get 2–3 stock profiles including ticker, technical summary, key price levels, and relevant market context.</p>
+        <h3>Receive an educational recap</h3>
+        <p>When a briefing is sent, it typically covers 2–3 tickers using public prices, published technical figures, and public news context. That is not a recommendation list.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">4</div>
         <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6L15 17H9l-.7-2C6.3 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="9.5" y1="18" x2="14.5" y2="18"/></svg>
         </div>
-        <h3>Make Informed Decisions</h3>
-        <p>Use the analysis as one input in your own research. Our insights are educational — your investment decisions are always your own.</p>
+        <h3>Do your own research</h3>
+        <p>Use any recap only as one source among many. Your investment decisions are yours alone. Consider a licensed financial advisor if you need advice.</p>
       </div>
     </div>
   </section>
@@ -1494,16 +1536,16 @@
 
         <!-- Section title — outside the card -->
         <div class="fade-in" style="text-align:center; margin-bottom: 8px;">
-          <span class="section-label">S&amp;P 500 · Top 20 by Market Cap</span>
-          <h2 class="section-title centered">Live US Market Snapshot</h2>
-          <p class="section-sub centered" style="margin-bottom:0;">Real-time prices for the 20 largest US stocks. Click any tile to see full details.</p>
+          <span class="section-label">Illustrative set of 20 large US-listed companies</span>
+          <h2 class="section-title centered">US Market Quotes on This Page</h2>
+          <p class="section-sub centered" style="margin-bottom:0;">Third-party quotes for a fixed list of 20 well-known tickers. This is not a live ranking of the S&amp;P 500. Click a tile for the quote fields we receive.</p>
         </div>
 
         <!-- Live S&P 500 Top 20 panel -->
         <div class="features-visual fade-in">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
             <div id="card-live-badge" class="live-badge delayed" style="margin-bottom:0;">
-              <span class="dot"></span> Live Market Data
+              <span class="dot"></span> Third-party quotes
             </div>
             <span class="card-refresh-note" id="card-refresh-time"></span>
           </div>
@@ -1566,40 +1608,40 @@
     <div style="max-width:1100px; margin:0 auto;">
       <div style="text-align:center; margin-bottom:56px;" class="fade-in">
         <span class="section-label">What You Receive</span>
-        <h2 class="section-title centered">Everything You Need to Stay Informed</h2>
-        <p class="section-sub centered">Our daily briefings are designed for investors who want structured, data-driven market research — without the noise.</p>
+        <h2 class="section-title centered">What the WhatsApp briefing may include</h2>
+        <p class="section-sub centered">These are educational summaries of public information. They are not personalized research and they are not a complete market picture.</p>
       </div>
       <div class="feat-grid fade-in">
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-          <h4>Pre-Market Stock Briefing</h4>
-          <p>2–3 US stock insights every trading day before 9 AM ET, covering technicals, sector trends, and key catalysts.</p>
+          <h4>Pre-market data recap</h4>
+          <p>On most trading mornings before 9 AM ET, a short recap of 2–3 tickers using public prices, published technical figures, and public headlines.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <h4>Technical Analysis Summaries</h4>
-          <p>Key support/resistance levels, moving average context, RSI readings, and volume analysis for each stock.</p>
+          <h4>Published technical figures</h4>
+          <p>When we mention moving averages, RSI, or volume, those figures come from public or third-party data and can be wrong or stale. They are not trade signals.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <h4>Sector &amp; Macro Context</h4>
-          <p>Fed calendar events, earnings weeks, sector rotations, and macro data that may influence the analysis.</p>
+          <h4>Sector and macro headlines</h4>
+          <p>We may mention scheduled Fed events, earnings weeks, or sector news that is already public. Mentioning an event is not a forecast.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <h4>Community Discussion</h4>
-          <p>Ask questions, share research, and learn alongside thousands of US-focused investors in the group.</p>
+          <h4>Optional group discussion</h4>
+          <p>Members may discuss public market information in the WhatsApp group. Other members’ comments are not our advice and may be wrong.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-          <h4>Always Free — No Hidden Fees</h4>
-          <p>Completely free to join and remain. No subscriptions, no commissions, no consulting fees. Ever.</p>
+          <h4>Fees on this website: $0</h4>
+          <p>We do not collect payment, subscriptions, or commissions on this page. Future paid features, if any, would be disclosed before you are asked to pay.</p>
         </div>
         <div class="feat-card feat-card-cta">
           <div style="font-size:2rem;margin-bottom:12px;">📲</div>
-          <h4 style="color:#fff;">Ready to join?</h4>
-          <p style="color:rgba(255,255,255,0.6);margin-bottom:20px;">Get your first daily update this morning.</p>
-          <a  class="btn-primary" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;padding:10px 22px;">Get Today's Free Market Briefing</a>
+          <h4 style="color:#fff;">Want the group invite?</h4>
+          <p style="color:rgba(255,255,255,0.6);margin-bottom:20px;">Open WhatsApp to request access. You can leave anytime.</p>
+          <a  class="btn-primary" href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;padding:10px 22px;">Open the WhatsApp group invite</a>
         </div>
       </div>
     </div>
@@ -1610,12 +1652,12 @@
     <div style="max-width:1100px; margin:0 auto;">
       <div style="text-align:center; margin-bottom:36px;">
         <span class="section-label">Market Movers</span>
-        <h2 class="section-title centered">Today's Top Gainers &amp; Losers</h2>
-        <p class="section-sub centered" style="margin-bottom:16px;">Live ranking of the S&amp;P 500 top 20 stocks — updated every 90 seconds.</p>
+        <h2 class="section-title centered">Price changes among the 20 tickers shown</h2>
+        <p class="section-sub centered" style="margin-bottom:16px;">Sorted from the same fixed 20-ticker list on this page — not a complete S&amp;P 500 ranking. Quotes refresh periodically and may be delayed.</p>
         <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:32px;flex-wrap:wrap;">
           <div id="table-live-badge" style="display:inline-flex;align-items:center;gap:6px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:#4ade80;font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:4px 12px;border-radius:100px;">
             <span style="width:6px;height:6px;border-radius:50%;background:#4ade80;animation:liveblink 2s infinite;display:inline-block;" id="table-dot"></span>
-            <span id="table-market-status">Live Data</span>
+            <span id="table-market-status">Quote data</span>
           </div>
           <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.2);color:#60a5fa;font-size:0.78rem;font-weight:600;padding:4px 12px;border-radius:100px;">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -1655,8 +1697,8 @@
   <section class="markets fade-in" id="markets">
     <div style="text-align:center; margin-bottom: 56px;">
       <span class="section-label">Coverage</span>
-      <h2 class="section-title centered">US Exchanges We Cover</h2>
-      <p class="section-sub centered">We focus exclusively on US-listed equities across major exchanges and key sectors driving today's market.</p>
+      <h2 class="section-title centered">US listings we may mention</h2>
+      <p class="section-sub centered">We may discuss US-listed equities and well-known ETFs. We are not affiliated with NYSE, NASDAQ, or S&amp;P Dow Jones Indices. Mention of an exchange or index is not an endorsement.</p>
     </div>
     <div class="exchange-grid">
       <div class="exchange-card">
@@ -1703,41 +1745,35 @@
   <!-- ─── TESTIMONIALS ─────────────────────────────────────── -->
   <section class="testimonials" id="testimonials">
     <div style="text-align:center; margin-bottom: 56px;" class="fade-in">
-      <span class="section-label">Community</span>
-      <h2 class="section-title centered">What Members Are Saying</h2>
-      <p class="section-sub centered">Feedback from investors who use our daily insights as part of their research process.</p>
+      <span class="section-label">How to use this</span>
+      <h2 class="section-title centered">Typical ways people use the briefing</h2>
+      <p class="section-sub centered">These are use cases, not reviews and not typical results. We do not claim any investment outcome.</p>
     </div>
     <div class="review-grid">
       <div class="review-card fade-in">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"The pre-market briefings save me hours of research. The technical levels are clear and the sector context really helps me understand what's moving and why."</p>
+        <p class="review-text">Read the morning recap as a short summary of public price and volume moves, then verify every figure in your own brokerage or a licensed data terminal.</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">M</div>
           <div>
-            <div class="reviewer-name">Michael T.</div>
-            <div class="reviewer-loc">Individual Investor · Austin, TX</div>
+            <div class="reviewer-name">Morning public-data recap</div>
+            <div class="reviewer-loc">Educational starting point only</div>
           </div>
         </div>
       </div>
       <div class="review-card fade-in">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"I've been in the group for 4 months. The analysis is thorough and I appreciate that they always remind us this is for educational purposes — that's how it should be."</p>
+        <p class="review-text">Use sector or macro headlines in the briefing to decide what to research further. A mentioned ticker is not a recommendation to buy, sell, or hold.</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">S</div>
           <div>
-            <div class="reviewer-name">Sarah K.</div>
-            <div class="reviewer-loc">Retail Investor · Chicago, IL</div>
+            <div class="reviewer-name">Context for your own research</div>
+            <div class="reviewer-loc">You remain responsible for decisions</div>
           </div>
         </div>
       </div>
       <div class="review-card fade-in">
-        <div class="stars">★★★★☆</div>
-        <p class="review-text">"Great for staying on top of tech and semiconductor stocks. The NASDAQ coverage is really strong. Community discussions are also helpful for getting different perspectives."</p>
+        <p class="review-text">Discuss public information in the group if you want other viewpoints. Treat other members’ comments as unofficial and possibly incorrect.</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">D</div>
           <div>
-            <div class="reviewer-name">David R.</div>
-            <div class="reviewer-loc">Self-directed Investor · Seattle, WA</div>
+            <div class="reviewer-name">Optional discussion</div>
+            <div class="reviewer-loc">Not professional advice</div>
           </div>
         </div>
       </div>
@@ -1756,7 +1792,7 @@
         <button class="faq-q" onclick="toggleFaq(this)">
           Is this service really free? <span class="chevron">▼</span>
         </button>
-        <div class="faq-a">Yes — joining and staying in the group is completely free. We do not charge subscription fees, commissions, or any form of payment. Our content is supported by the community itself.</div>
+        <div class="faq-a">No payment is collected on this website to join or stay in the WhatsApp group. We do not charge a subscription here. If a paid feature is ever offered, it will be disclosed before you are asked to pay.</div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -1768,13 +1804,13 @@
         <button class="faq-q" onclick="toggleFaq(this)">
           What US markets and sectors do you cover? <span class="chevron">▼</span>
         </button>
-        <div class="faq-a">We primarily focus on NYSE and NASDAQ-listed equities across all major sectors, with particular depth in technology, financials, energy, healthcare, and consumer stocks. We also cover select S&P 500 and sector ETFs when relevant.</div>
+        <div class="faq-a">Briefings discuss US-listed equities and, at times, widely known ETFs. Coverage is not complete, is not a ranking of the S&amp;P 500, and is not an endorsement of any issuer. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners. We are not affiliated with those organizations.</div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" onclick="toggleFaq(this)">
           What time are updates sent each day? <span class="chevron">▼</span>
         </button>
-        <div class="faq-a">Daily stock insights are delivered before 9:00 AM Eastern Time, giving you time to review the analysis before US market open at 9:30 AM ET. Additional context may be shared during the trading day when significant market events occur.</div>
+        <div class="faq-a">When a briefing is sent, it is usually before 9:00 AM Eastern Time on a US trading day. Delivery can be late or skipped. Additional public-news context may be shared later. Timing is not a promise that you can act before the open.</div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -1788,6 +1824,20 @@
         </button>
         <div class="faq-a">No. We do not guarantee any investment returns or outcomes. Stock market investing involves risk, and past market analysis does not guarantee future performance. All information is shared for educational purposes only.</div>
       </div>
+    </div>
+  </section>
+
+  <section class="biz-info" id="business-info">
+    <div class="biz-info-card">
+      <h2>Business information (required for financial-service ads)</h2>
+      <p><strong>Service name:</strong> USStockEdge</p>
+      <p><strong>What we offer:</strong> Optional educational summaries of publicly available US market information, delivered in a WhatsApp group.</p>
+      <p><strong>Fees:</strong> $0 collected on this website. No subscription checkout is presented on this page.</p>
+      <p><strong>Licensing:</strong> We are not a registered investment adviser, broker-dealer, or bank. We do not provide personalized investment advice.</p>
+      <p><strong>Contact:</strong> <a href="mailto:contact@usstockedge.com">contact@usstockedge.com</a> · Privacy: <a href="mailto:privacy@usstockedge.com">privacy@usstockedge.com</a></p>
+      <!-- OPERATOR ACTION: replace the next line with the legal entity’s real street address before running Google Ads. Do not invent an address. -->
+      <p><strong>Business address:</strong> Publish the legal entity’s full street address here before running Google Ads. Google requires a physical address that is immediately visible — not only on a linked page.</p>
+      <p><strong>Trademarks:</strong> NYSE, NASDAQ, S&amp;P 500, and ticker symbols mentioned on this site belong to their respective owners. No affiliation or endorsement is claimed.</p>
     </div>
   </section>
 
@@ -1898,7 +1948,7 @@
         }
         document.getElementById('ticker-track').innerHTML = tickerItems + tickerItems;
         dot.className = 'live-dot' + (open ? '' : ' closed');
-        statusEl.textContent = open ? 'Market Open · Live Data' : 'Market Closed · Last session data';
+        statusEl.textContent = open ? 'Market hours · Third-party quotes (may be delayed)' : 'Market closed · Last available session quotes';
         document.getElementById('ticker-update-time').textContent = 'Updated ' + et + ' ET';
 
         // Cache quotes (using display symbols as keys)
@@ -1933,7 +1983,7 @@
         ranked.sort(function(a, b) { return Math.abs(b.q.dp) - Math.abs(a.q.dp); });
         var top3 = ranked.slice(0, 3);
         var today = new Date().toLocaleDateString('en-US', { weekday:'long', month:'short', day:'numeric', timeZone:'America/New_York' });
-        var waLines = '<strong>Top movers today — ' + today + ':</strong><br>';
+        var waLines = '<strong>Example public price moves — ' + today + ':</strong><br>';
         for (var m = 0; m < top3.length; m++) {
           var s = top3[m], up2 = s.q.dp >= 0;
           waLines += (m+1) + '. ' + s.sym + ' — $' + fmt(s.q.c) + ' <span style="color:' + (up2?'#4ade80':'#f87171') + '">' + (up2?'▲ +':'▼ ') + fmt(s.q.dp) + '%</span><br>';
@@ -1942,13 +1992,13 @@
         if (top3[0]) { var s0=top3[0],u0=s0.q.dp>=0; var el0=document.getElementById('wa-l1'); if(el0) el0.innerHTML='1. '+s0.sym+' — $'+fmt(s0.q.c)+' <span style="color:'+(u0?'#4ade80':'#f87171')+'">'+(u0?'▲ +':'▼ ')+fmt(s0.q.dp)+'%</span>'; }
         if (top3[1]) { var s1=top3[1],u1=s1.q.dp>=0; var el1=document.getElementById('wa-l2'); if(el1) el1.innerHTML='2. '+s1.sym+' — $'+fmt(s1.q.c)+' <span style="color:'+(u1?'#4ade80':'#f87171')+'">'+(u1?'▲ +':'▼ ')+fmt(s1.q.dp)+'%</span>'; }
         if (top3[2]) { var s2=top3[2],u2=s2.q.dp>=0; var el2=document.getElementById('wa-l3'); if(el2) el2.innerHTML='3. '+s2.sym+' — $'+fmt(s2.q.c)+' <span style="color:'+(u2?'#4ade80':'#f87171')+'">'+(u2?'▲ +':'▼ ')+fmt(s2.q.dp)+'%</span>'; }
-        document.getElementById('wa-time').textContent = nowET() + ' ET · Live data';
+        document.getElementById('wa-time').textContent = nowET() + ' ET · Quotes may be delayed';
 
         var open = isMarketOpen();
         var badge = document.getElementById('card-live-badge');
         badge.innerHTML = open
-          ? '<span class="dot"></span> Live Market Data'
-          : '<span class="dot" style="background:var(--gold);animation:none"></span> Market Closed · Last session data';
+          ? '<span class="dot"></span> Third-party quotes (may be delayed)'
+          : '<span class="dot" style="background:var(--gold);animation:none"></span> Market closed · Last available quotes';
         badge.className = 'live-badge' + (open ? '' : ' delayed');
         document.getElementById('card-refresh-time').textContent = 'Updated ' + nowET() + ' ET';
 

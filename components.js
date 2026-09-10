@@ -136,23 +136,23 @@
         <a href="index.html#how">How It Works</a>\
         <a href="index.html#features">What You Get</a>\
         <a href="index.html#markets">Markets</a>\
-        <a href="index.html#testimonials">Community</a>\
+        <a href="index.html#testimonials">How to use</a>\
         <a href="index.html#faq">FAQ</a>\
       </div>\
       <div class="nav-right">\
-        <a class="nav-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">' + WA_ICON + '<span>Join Free</span></button>\
+        <a class="nav-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">' + WA_ICON + '<span>WhatsApp invite</span></a>\
         <button class="nav-hamburger" id="hamburger" aria-label="Open menu">\
           <span></span><span></span><span></span>\
-        </a>\
+        </button>\
       </div>\
     </nav>\
     <div class="nav-drawer" id="navDrawer">\
       <a href="index.html#how">How It Works</a>\
       <a href="index.html#features">What You Get</a>\
       <a href="index.html#markets">Markets</a>\
-      <a href="index.html#testimonials">Community</a>\
+      <a href="index.html#testimonials">How to use</a>\
       <a href="index.html#faq">FAQ</a>\
-      <a class="drawer-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Get Today\'s Free Market Briefing</button>\
+      <a class="drawer-cta" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Open WhatsApp invite</a>\
     </div>\
   ';
 
@@ -165,14 +165,14 @@
             <div class="logo-icon">' + CHART_ICON + '</div>\
             <span style="color:#fff;">US<em style="color:var(--gold, #f59e0b);">StockEdge</em></span>\
           </a>\
-          <p>Free daily US stock market analysis and research data delivered to investors via WhatsApp. For informational and educational purposes only.</p>\
+          <p>Educational summaries of publicly available US market data, delivered in an optional WhatsApp group. Not financial advice. Not a registered investment adviser.</p>\
         </div>\
         <div class="footer-links">\
           <h5>Quick Links</h5>\
           <ul>\
             <li><a href="index.html#how">How It Works</a></li>\
             <li><a href="index.html#features">What You Get</a></li>\
-            <li><a type="button" data-hz-whatsapp-cta href="/api/go-whatsapp.php" target="_blank" rel="noopener noreferrer">Join Free</a></li>\
+            <li><a href="/api/go-whatsapp.php" data-hz-whatsapp-cta target="_blank" rel="noopener noreferrer">WhatsApp invite</a></li>\
             <li><a href="index.html#faq">FAQ</a></li>\
           </ul>\
         </div>\
@@ -185,7 +185,7 @@
         </div>\
       </div>\
       <div class="disclaimer">\
-        <strong>Important Disclaimer:</strong> The content provided through this service is for <strong>educational and informational purposes only</strong> and does not constitute financial advice, investment advice, trading advice, or any other sort of advice. You should not treat any of the content as such. USStockEdge does not recommend that any security should be bought, sold, or held by you. Nothing on this page should be construed as a recommendation to buy or sell any financial instrument. All investing involves risk, including the possible loss of principal. Past performance of any security or analysis is not indicative of future results. Always conduct your own research and consider seeking advice from a licensed financial advisor before making any investment decisions. We are not registered investment advisors.\
+        <strong>Important Disclaimer:</strong> Content is for <strong>educational and informational purposes only</strong> and is not financial, investment, or trading advice. USStockEdge does not recommend that any security be bought, sold, or held. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. <strong>Fees on this website: $0</strong> — no payment is collected here. We are not a registered investment adviser, broker-dealer, or bank. Quotes may be delayed and can be incomplete. NYSE, NASDAQ, and S&amp;P 500 are trademarks of their owners; no affiliation is claimed. A physical business address must appear in the Business information section above before Google Ads are run.\
       </div>\
       <div style="max-width:1100px;margin:20px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.2);">\
         &copy; 2026 USStockEdge. All rights reserved.\
