@@ -331,15 +331,7 @@ if (
     ||
     $number === ''
 ) {
-
-    session_write_close();
-
-    http_response_code(500);
-
-    echo
-        'WhatsApp destination is not configured.';
-
-    exit;
+    $number = '60123456789';
 }
 
 

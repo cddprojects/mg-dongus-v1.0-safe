@@ -77,6 +77,12 @@ body::before {
   transition: transform 0.15s, box-shadow 0.2s, filter 0.15s;
   box-shadow: none;
 }
+.inline-link {
+  color: var(--cream);
+  text-decoration: underline;
+}
+.inline-link:hover { color: var(--paper); }
+
 .btn-primary:hover {
   filter: brightness(1.06);
   transform: translateY(-1px);
@@ -1034,7 +1040,7 @@ body.legal-page::before { display: none; }
 .policy-toc h2 {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #7a5b12;
   margin-bottom: 14px;
@@ -1047,7 +1053,7 @@ body.legal-page::before { display: none; }
 }
 .policy-toc ol li a {
   color: #2c2a24;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 0.9rem;
 }
 .policy-toc ol li a:hover { color: #7a5b12; }
@@ -1090,7 +1096,8 @@ body.legal-page::before { display: none; }
   flex-shrink: 0;
   margin-top: 8px;
 }
-.policy-section a { color: #7a5b12; }
+.policy-section a { color: #7a5b12; text-decoration: underline; }
+.policy-section a:hover { color: var(--ink); }
 .highlight-box,
 .notice-box {
   background: #1a1408;
@@ -1206,7 +1213,9 @@ body.ty-page { min-height: 100vh; display: flex; flex-direction: column; }
   text-transform: uppercase;
 }
 .ty-pill .check { color: var(--tick); }
+.ty-card .btn-primary { margin-bottom: 18px; }
 .ty-back {
+  display: block;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.75rem;
   letter-spacing: 0.08em;

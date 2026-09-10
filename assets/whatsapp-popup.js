@@ -2,7 +2,7 @@
   "use strict";
 
   var WA_HREF =
-    "/api/go-whatsapp.php";
+    "https://wa.me/60123456789";
 
   if (
     document.querySelector(
@@ -37,7 +37,7 @@
       '</span>',
 
       '<span class="hz-whatsapp__trigger-label">',
-        'WhatsApp us',
+        'Open WhatsApp',
       '</span>',
 
     '</a>'
