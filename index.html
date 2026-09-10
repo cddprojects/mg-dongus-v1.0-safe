@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  
   <title>USStockEdge — Educational US market briefing</title>
-  <meta name="description" content="Educational recap of public US market data in WhatsApp. Not financial advice. Not a registered investment advisor." />
+  <meta name="description" content="Educational recap of public US market data in WhatsApp. Not financial advice. Not a registered investment adviser." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/briefing.css?v=20260910-13" />
+  <link rel="stylesheet" href="assets/briefing.css?v=20260910-14" />
 
   <link rel="stylesheet" href="assets/whatsapp-popup.css?v=20260821-1">
   <script src="assets/whatsapp-popup.js?v=20260821-1" defer></script>
@@ -108,7 +108,7 @@
           </div>
           <div>
             <div class="stat-chip-title">We review <strong>public price, volume, and sector data</strong> each morning</div>
-            <div class="stat-chip-meta">NYSE · NASDAQ · Delayed quotes · Public headlines</div>
+            <div class="stat-chip-meta">NYSE · NASDAQ · Delayed prices · Public headlines</div>
           </div>
         </div>
 
@@ -142,7 +142,7 @@
             </div>
             <div>
               <div class="wa-title">US StockEdge · Daily Update</div>
-              <div class="wa-sub" id="wa-time">Example · Delayed quotes</div>
+              <div class="wa-sub" id="wa-time">Example · Delayed prices</div>
             </div>
           </div>
           <!-- Time label -->
@@ -163,7 +163,7 @@
           </div>
           <div class="delivered-tick wa-tick" id="wa-tick">✓✓ Delivered</div>
         </div>
-        <p class="wa-caption">* Example layout. Third-party quotes may be delayed. Educational use only.</p>
+        <p class="wa-caption">* Example layout. Third-party prices may be delayed. Educational use only.</p>
       </div>
     </div>
   </section>
@@ -189,9 +189,9 @@
           </div>
           <div class="kicker">Diversify</div>
           <h3>Multiple sources</h3>
-          <p>On-page quotes are third-party and may be delayed. Briefings cite public NYSE and Nasdaq prices, volume, and headlines already in the news.</p>
+          <p>On-page prices are third-party and may be delayed. Briefings cite public NYSE and Nasdaq prices, volume, and headlines already in the news.</p>
           <div class="bullet-list">
-            <div class="bullet">Delayed third-party quotes</div>
+            <div class="bullet">Delayed third-party prices</div>
             <div class="bullet">Public calendar headlines</div>
             <div class="bullet">Public sector reports</div>
           </div>
@@ -281,7 +281,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
         <h3>We review public data</h3>
-        <p>Most mornings we look at public NYSE and NASDAQ quotes and volume — what already happened.</p>
+        <p>Most mornings we look at public NYSE and NASDAQ prices and volume — what already happened.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">3</div>
@@ -712,7 +712,7 @@
         }
         document.getElementById('ticker-track').innerHTML = tickerItems + tickerItems;
         dot.className = 'live-dot' + (open ? '' : ' closed');
-        statusEl.textContent = open ? 'Market hours · Delayed quotes' : 'Market closed · Last session';
+        statusEl.textContent = open ? 'Market hours · Delayed prices' : 'Market closed · Last session';
         document.getElementById('ticker-update-time').textContent = 'Updated ' + et + ' ET';
 
         // Cache quotes (using display symbols as keys)
