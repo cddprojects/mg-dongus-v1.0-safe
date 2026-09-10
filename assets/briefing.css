@@ -755,6 +755,7 @@ section { padding: 88px 5%; position: relative; z-index: 1; }
 /* Table */
 .movers,
 .band-table { background: var(--ink) !important; }
+#features { scroll-margin-top: 88px; }
 .movers .section-title,
 .band-table .section-title { color: var(--paper); }
 .movers .section-sub,
